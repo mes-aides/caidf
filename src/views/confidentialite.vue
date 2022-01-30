@@ -183,7 +183,7 @@
           subject: 'Mes données',
           body: emailBody,
         }"
-        >{{ contactEmail }}</a
+        >{{ process.env.VUE_APP_CONTACT_EMAIL }}</a
       >
     </p>
 
@@ -305,11 +305,8 @@
 </template>
 
 <script>
-import ContactEmailMixin from "@/mixins/contact-email"
-
 export default {
   name: "Cgu",
-  mixins: [ContactEmailMixin],
   computed: {
     situation: function () {
       return this.$store.getters.situation

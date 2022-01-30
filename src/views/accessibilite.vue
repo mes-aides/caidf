@@ -32,7 +32,7 @@
             v-mail="{
               subject: 'Problème d\'accessibilité',
             }"
-            >{{ contactEmail }}</a
+            >{{ process.env.VUE_APP_CONTACT_EMAIL }}</a
           >
         </li>
       </ul>
@@ -47,10 +47,7 @@
 </template>
 
 <script>
-import ContactEmailMixin from "@/mixins/contact-email"
-
 export default {
   name: "Accessibilite",
-  mixins: [ContactEmailMixin],
 }
 </script>
