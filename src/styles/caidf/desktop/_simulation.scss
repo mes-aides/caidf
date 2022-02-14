@@ -1,0 +1,35 @@
+.aj-simulation {
+  min-height: 100%;
+
+  .caidf-simulation-content {
+    $helping-text-size: 30%;
+    display: flex;
+    position: relative;
+
+    .caidf-simulation-helping-block {
+      padding: 0 4%;
+      width: $helping-text-size;
+      background-color: $color-primaire;
+      color: white;
+
+      .caidf-help-icon {
+        margin: 32px 0;
+        text-align: center;
+      }
+
+      .caidf-simulation-helping-text {
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .caidf-simulation-helping-img {
+        margin-top: auto;
+        max-width: 100%;
+      }
+    }
+
+    .caidf-simulation-survey {
+      width: #{100% - $helping-text-size};
+    }
+  }
+}
