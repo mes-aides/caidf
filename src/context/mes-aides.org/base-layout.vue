@@ -1,33 +1,4 @@
 <template>
-  <header class="navbar" role="navigation">
-    <div class="container navbar__container">
-      <div class="navbar__container">
-        <router-link id="logo" to="/" class="navbar__home">
-          <img
-            class="navbar__logo"
-            src="@/../public/mes-aides.org/img/logo.svg"
-            alt="Logo de Mes-Aides.org"
-          />
-        </router-link>
-      </div>
-      <nav>
-        <ul class="nav__links">
-          <li class="nav__item">
-            <router-link to="/liens-utiles">Obtenir de l'aide</router-link>
-          </li>
-          <li class="nav__item">
-            <router-link to="/a-propos">Qui sommes nous&nbsp;?</router-link>
-          </li>
-          <li class="nav__item"
-            ><router-link to="/ameliorer">
-              Comment nous aider&nbsp;?
-            </router-link></li
-          >
-        </ul>
-      </nav>
-    </div>
-  </header>
-
   <div class="aj-website">
     <div class="aj-website-content">
       <slot />

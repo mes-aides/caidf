@@ -3,26 +3,35 @@
     <div v-if="showProgress" class="aj-complete-progress-bar">
       <div :style="currentProgressStyle" />
     </div>
-    <div
-      class="container aj-layout-container"
-      :class="{ 'aj-debug-container': debug }"
-    >
-      <div class="aj-main-container">
-        <TitreChapitre />
-        <div v-if="debug" class="aj-debug-switch">
-          <button class="button small" @click="disableDebug"
-            >Quitter le mode debug</button
-          >
-        </div>
-        <div v-if="$store.state.message.text" class="notification warning">
-          <div class="message" v-html="$store.state.message.text" />
-        </div>
-        <div class="aj-box-wrapper">
-          <router-view :key="$route.path" />
+    <Breadcrumb />
+    <div class="caidf-simulation-content">
+      <div class="caidf-simulation-helping-block">
+        <div class="caidf-help-icon">Icon i</div>
+        <p class="caidf-simulation-helping-text" v-html="helpingText"></p>
+        <img :src="helpingImg" class="caidf-simulation-helping-img" />
+      </div>
+      <div class="caidf-simulation-survey">
+        <div
+          class="container aj-layout-container"
+          :class="{ 'aj-debug-container': debug }"
+        >
+          <div class="aj-main-container">
+            <TitreChapitre />
+            <div v-if="debug" class="aj-debug-switch">
+              <button class="button small" @click="disableDebug"
+                >Quitter le mode debug</button
+              >
+            </div>
+            <div v-if="$store.state.message.text" class="notification warning">
+              <div class="message" v-html="$store.state.message.text" />
+            </div>
+            <div class="aj-box-wrapper">
+              <router-view :key="$route.path" />
+            </div>
+          </div>
+          <Progress v-if="debug" />
         </div>
       </div>
-      <Progress v-if="debug" />
-      <Summary v-else />
     </div>
   </div>
 </template>
@@ -30,18 +39,46 @@
 <script>
 import TitreChapitre from "@/components/titre-chapitre"
 import Progress from "@/components/progress"
-import Summary from "@/components/summary"
 import { isStepAnswered } from "@/../lib/answers"
+import Breadcrumb from "@/context/mes-aides.org/components/breadcrumb"
 
 export default {
   name: "Simulation",
   components: {
+    Breadcrumb,
     TitreChapitre,
     Progress,
-    Summary,
   },
   data() {
+    const helpingContentPerChapter = {
+      profil: {
+        text: `Ces informations sont nécessaires au traitement de votre demande. Vos données personnelles ne seront pas communiquées à d'autres organismes à des fins commerciales`,
+        img: require("/public/mes-aides.org/img/illustration.svg"),
+      },
+      foyer: {
+        text: `Vos réponses niys permettront de vérifier votre éligibilité aux aides.`,
+        img: require("/public/mes-aides.org/img/illustration.svg"),
+      },
+      logement: {
+        text: `Vos réponses niys permettront de vérifier votre éligibilité aux aides.`,
+        img: require("/public/mes-aides.org/img/illustration.svg"),
+      },
+      revenus: {
+        text: `Sélectionnez les types de ressources perçues depuis <strong>${this.$store.state.dates.twelveMonthsAgo.label}</strong
+      >. Vous pourrez ensuite saisir les montants.`,
+        img: require("/public/mes-aides.org/img/illustration.svg"),
+      },
+      projets: {
+        text: `Vos réponses niys permettront de vérifier votre éligibilité aux aides.`,
+        img: require("/public/mes-aides.org/img/illustration.svg"),
+      },
+      recapitulatif: {
+        text: `Retrouvez l'ensemble de vos réponses dans cette page.`,
+        img: require("/public/mes-aides.org/img/illustration.svg"),
+      },
+    }
     return {
+      helpingContentPerChapter,
       window,
     }
   },
@@ -81,6 +118,22 @@ export default {
       return {
         width: `${this.progress * 100}%`,
       }
+    },
+    chapters() {
+      return this.$state.chapters(
+        this.$route.path,
+        this.$store.getters.getAllSteps,
+        this.$store.getters.lastUnansweredStep?.path
+      )
+    },
+    currentChaper() {
+      return this.chapters.find((chapter) => chapter.current)
+    },
+    helpingText() {
+      return this.helpingContentPerChapter[this.currentChaper.name]?.text
+    },
+    helpingImg() {
+      return this.helpingContentPerChapter[this.currentChaper.name]?.img
     },
   },
   methods: {
