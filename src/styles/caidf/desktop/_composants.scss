@@ -1,0 +1,63 @@
+.caidf-breadcrumb-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: $color-secondaire;
+  color: white;
+
+  .caidf-breadcrumb {
+    display: flex;
+    align-items: center;
+    margin: 24px auto;
+
+    .caidf-breadcrumb-arrow {
+      margin: 0 16px;
+
+      svg {
+        height: 15px;
+        width: 15px;
+      }
+    }
+
+    .caidf-breadcrumb-link {
+      display: flex;
+      align-items: center;
+      color: white;
+
+      svg {
+        height: 24px;
+        width: 24px;
+      }
+
+      &.active {
+        font-weight: 700;
+        color: white;
+      }
+
+      &.disable:not(.active) {
+        color: $color-30-disabled;
+
+        svg.caidf-check path {
+          fill: $color-30-disabled;
+        }
+      }
+
+      &.active,
+      &.disable {
+        pointer-events: none;
+        text-decoration: none;
+      }
+
+      &.done {
+        color: white;
+
+        svg.caidf-check path {
+          fill: $color-success-30;
+        }
+      }
+
+      .caidf-check {
+        margin-right: 8px;
+      }
+    }
+  }
+}
