@@ -1,0 +1,137 @@
+.caidf-resultats {
+  .caidf-resultats-title-content {
+    padding: 0 16px;
+    margin: 60px auto 32px auto;
+    max-width: 700px;
+    text-align: center;
+
+    h1,
+    p {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .caidf-benefits-count {
+      margin-top: 16px;
+      font-weight: 700;
+
+      span {
+        font-size: 24px;
+        color: $color-accent;
+      }
+    }
+  }
+
+  .caidf-resultats-container {
+    padding-top: 60px;
+    background-color: $color-10-background;
+
+    .aj-main-container {
+      background-color: transparent;
+    }
+
+    .aj-aide-box,
+    .aj-box-wrapper .aj-box {
+      box-shadow: 0px 3px 6px #00000029;
+    }
+    .aj-droit-detail .aj-droit-conditions {
+      background-color: rgba($color-primaire, 0.5);
+      color: white;
+      border-radius: 4px;
+
+      a {
+        color: white;
+      }
+
+      &,
+      .aj-droit-conditions-title,
+      a {
+        font-family: "Open Sans Semi-bold";
+      }
+
+      svg {
+        margin-right: 4px;
+        width: 14px;
+        height: 12px;
+        path {
+          fill: $color-primaire;
+          stroke: $color-primaire;
+          stroke-width: 3px;
+        }
+      }
+    }
+
+    .aj-aide-illustration {
+      width: 90px;
+    }
+
+    .aj-benefit-label {
+      font-size: 18px;
+    }
+  }
+
+  .aj-aide-text {
+    img {
+      display: none;
+    }
+  }
+
+  .caidf-resultats-button {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+
+    .button span {
+      text-transform: uppercase;
+      margin-left: 8px;
+    }
+  }
+
+  .aj-droit-pro-agricole {
+    display: flex !important;
+    align-items: center;
+
+    svg {
+      margin-right: 8px;
+
+      path {
+        fill: $color-accent;
+      }
+    }
+  }
+
+  .aj-results-details {
+    margin-bottom: 75px;
+
+    .aj-droit-detail {
+      position: relative;
+      .caidf-invalid-link {
+        position: absolute;
+        bottom: -75px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        a {
+          padding: 10px;
+          color: $color-70-text-major;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.caidf-bon-a-savoir {
+  background-color: lightgrey;
+  border-radius: 3px;
+  padding: 5px;
+
+  .title {
+    font-weight: bold;
+  }
+}
+
+.mention-credit {
+  font-size: 20px;
+}

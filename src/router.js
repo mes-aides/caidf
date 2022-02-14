@@ -401,13 +401,15 @@ router.beforeEach((to, from, next) => {
 
     if (
       to.matched.some((r) => r.name === "foyer" || r.name === "simulation") &&
-      !to.path.endsWith("/date_naissance") &&
+      to.path != store.getAllSteps[1].path &&
       [
         "redirect",
         "resultats",
         "resultatsDetails",
-        "resultatsLieuxGeneriques",
-      ].indexOf(to.name) === -1 &&
+        "resultatsLieuxGeneriques"
+      ].indexOf(
+        to.name
+      ) === -1 &&
       !store.passSanityCheck &&
       to.query.debug === undefined
     ) {
@@ -468,6 +470,7 @@ router.afterEach((to) => {
   if (to.preventFocus) return
 
   nextTick(function () {
+    window.responsiveIframe()
     document.title = getTitleMeta(to)
 
     let title = document.querySelector("h1")

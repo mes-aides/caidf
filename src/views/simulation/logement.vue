@@ -68,22 +68,24 @@
           }}</span>
         </h2>
       </legend>
-      <div
-        v-for="response in locataireTypesQuestion.responses"
-        :key="response.value"
-        class="aj-selection-wrapper"
-      >
-        <input
-          :id="response.value"
-          v-model="locataireTypesQuestion.selectedValue"
-          type="radio"
-          :name="logementTypesQuestion.label"
-          :value="response.value"
-        />
-        <label :for="response.value">
-          {{ $filters.capitalize(response.label) }}
-          <span v-if="response.hint" class="help">{{ response.hint }}</span>
-        </label>
+      <div class="aj-selections">
+        <div
+          v-for="response in locataireTypesQuestion.responses"
+          :key="response.value"
+          class="aj-selection-wrapper"
+        >
+          <input
+            :id="response.value"
+            v-model="locataireTypesQuestion.selectedValue"
+            type="radio"
+            :name="logementTypesQuestion.label"
+            :value="response.value"
+          />
+          <label :for="response.value">
+            {{ $filters.capitalize(response.label) }}
+            <span v-if="response.hint" class="help">{{ response.hint }}</span>
+          </label>
+        </div>
       </div>
     </fieldset>
 

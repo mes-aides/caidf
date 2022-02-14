@@ -1,0 +1,23 @@
+label: Avance Jeunes Actifs
+institution: credit_agricole
+description:
+  L'Avance Jeunes Actifs est destinée à financer les projets des jeunes de 16 à 29 ans
+  inclus et facilitez votre entrée dans la vie active.
+  <br/><br/>
+  Avec l'Avance Jeunes Actifs vous bénéficiez d'une avance sous forme de prêt personnel de 1000e remboursable sur 12 mois.
+  <br/><br/>
+  <div class="mention-credit">Un crédit vous engage et doit être remboursé.
+  Vérifiez vos capacités de remboursement avant de vous engager.</div>
+conditions_generales:
+  - type: age
+    operator: ">="
+    value: 16
+  - type: age
+    operator: <=
+    value: 30
+instructions: https://www.credit-agricole.fr/ca-paris/particulier/credit/consommation/avance-jeunes-actifs.html
+prefix: l’
+type: bool
+periodicite: ponctuelle
+top: 112
+cta: Je découvre

@@ -13,10 +13,11 @@ conditions:
     revenu fiscal.
 periodicite: annuelle
 link: https://www.service-public.fr/particuliers/vosdroits/F2367
+instructions: https://www.credit-agricole.fr/ca-paris/particulier/epargne/livret-epargne-logement/livret-d-epargne-populaire-lep.html
 entity: individus
 openfiscaPeriod: thisMonth
 isBaseRessourcesYearMinusTwo: true
 floorAt: 0.01
 top: 30
 prefix: le
-institution: banque_de_france
+institution: credit_agricole

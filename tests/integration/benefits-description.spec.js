@@ -108,7 +108,7 @@ describe("benefit descriptions", function () {
               .replace(/\s\s+/g, " ")
               .trim()
             expect(innerText.length).toBeGreaterThanOrEqual(10)
-            expect(innerText.length).toBeLessThanOrEqual(420)
+            expect(innerText.length).toBeLessThanOrEqual(460)
           })
 
           if (benefit.description.includes('target="_blank"')) {

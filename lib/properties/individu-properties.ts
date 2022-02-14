@@ -12,7 +12,8 @@ import { capitalize, yearsAgo } from "../utils.js"
 import Scolarite from "../scolarite.js"
 import { getAnswer } from "../answers.js"
 
-export default {
+
+const props = {
   aah_restriction_substantielle_durable_acces_emploi: new BooleanProperty({
     question: ({ individu }) => {
       return `${Individu.label(
@@ -675,3 +676,14 @@ export default {
     ],
   }),
 }
+
+try {
+  const {
+    default: { addProperties },
+  } = require("../additional-questions")
+  addProperties(props)
+} catch (e) {
+  console.log(e)
+}
+
+export default props

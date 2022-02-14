@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/caidf/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Semi-bold";
+  src: url("../fonts/caidf/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/caidf/OpenSans-Bold.ttf") format("truetype");
+}
+
+html {
+  @include font-body();
+
+  body {
+    &,
+    a {
+      font-family: "Open Sans";
+    }
+  }
+
+  h1,
+  .caidf-is-font-size-1,
+  body .aj-main-container .aj-category-title h1 {
+    @include font-heading-1-regular();
+    color: $color-primaire;
+  }
+
+  h2,
+  .caidf-is-font-size-2 {
+    @include font-heading-2-regular();
+  }
+
+  h3,
+  .caidf-is-font-size-3 {
+    @include font-heading-3();
+  }
+
+  h4,
+  .caidf-is-font-size-4 {
+    @include font-heading-4();
+  }
+
+  h5,
+  .caidf-is-font-size-5 {
+    @include font-heading-5();
+  }
+
+  body .aj-question {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Open Sans Semi-bold";
+    color: black;
+  }
+
+  body h3.aj-question {
+    text-transform: none !important;
+  }
+
+  .caidf-font-body-small {
+    @include font-body-small();
+  }
+
+  // Override class font
+  button.button,
+  a.button,
+  .aj-main-container .aj-tooltip:before,
+  .aj-main-container .aj-help-popup > *:last-child {
+    font-family: "Open Sans" !important;
+  }
+}
+
+html body .aj-help-modal .aj-help-modal-container .aj-help-modal-content {
+  font-family: "Open Sans";
+}
+
+.caidf {
+  &-font-bold {
+    font-weight: 700 !important;
+  }
+
+  &-font-open-sans-semi-bold {
+    font-family: "Open Sans Semi-bold" !important;
+  }
+
+  &-font-open-sans-bold {
+    font-family: "Open Sans Bold" !important;
+  }
+
+  &-has-text-uppercase {
+    text-transform: uppercase !important;
+  }
+
+  &-text-transformation-none {
+    text-transform: none;
+  }
+}

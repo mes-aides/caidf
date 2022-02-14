@@ -1,0 +1,137 @@
+html body .aj-simulation {
+  min-height: 100%;
+  background: white;
+
+  .caidf-simulation-content {
+    $helping-text-size: 30%;
+    display: flex;
+    position: relative;
+
+    &.full-width {
+      .caidf-simulation-helping-block {
+        display: none;
+      }
+      .caidf-simulation-survey {
+        width: 100%;
+      }
+    }
+
+    .caidf-simulation-helping-block {
+      padding: 0 4%;
+      width: $helping-text-size;
+      background-color: $color-primaire;
+      color: white;
+
+      .caidf-simulation-helping-block-content {
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 88px;
+
+        height: calc(
+          100vh - 72px - #{$progress-height}
+        ); // full screen height - breadcrumb - progress-bar
+      }
+
+      .caidf-help-icon {
+        display: flex;
+        justify-content: center;
+        margin-top: 64px;
+        margin-bottom: 32px;
+
+        img {
+          height: 45px;
+          width: 45px;
+        }
+      }
+
+      .caidf-simulation-helping-text {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+        text-align: center;
+        font-size: 16px;
+      }
+
+      .caidf-simulation-helping-img {
+        margin-top: auto;
+        max-height: 400px;
+        max-width: 100%;
+
+        &.planning-sheets {
+          margin-bottom: 32px;
+        }
+        &.logement {
+          margin-bottom: 90px;
+        }
+      }
+    }
+
+    .caidf-simulation-survey {
+      width: #{100% - $helping-text-size};
+      background-color: white;
+      .aj-main-container {
+        background-color: white;
+
+        .aj-box-wrapper > * {
+          box-shadow: none;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      .aj-category-title-wrapper {
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .aj-actions {
+        left: 0;
+      }
+    }
+  }
+
+  .aj-category-title {
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row !important;
+
+    .caidf-recapitulatif-button {
+      flex-shrink: 0;
+      margin-left: 24px;
+    }
+  }
+
+  #add-pac {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-primaire;
+    color: white;
+    font-family: "Open Sans Semi-bold" !important;
+    text-transform: uppercase;
+
+    padding: 24px 28px;
+
+    &:hover {
+      background-color: white;
+      color: $color-primaire;
+
+      svg path {
+        fill: $color-primaire;
+      }
+    }
+
+    svg {
+      margin-bottom: 12px;
+      height: 24px;
+      width: 24px;
+
+      path {
+        fill: white;
+      }
+    }
+  }
+}
