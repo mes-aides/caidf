@@ -565,7 +565,7 @@ const store = createStore({
     redirection: function (state, next) {
       state.commit(
         "setMessage",
-        `Vous avez été redirigé·e sur la première page du simulateur. Vous pensez que c'est une erreur&nbsp;? Contactez-nous&nbsp: <a href="mailto:${process.env.VUE_APP_CONTACT_EMAIL}">${process.env.VUE_APP_CONTACT_EMAIL}</a>.`
+        `Vous avez été redirigé·e sur la première page du simulateur. Vous pensez que c'est une erreur&nbsp;? <a href="mailto:${process.env.VUE_APP_CONTACT_EMAIL}">Contactez-nous</a>.`
       )
       next("/simulation")
     },

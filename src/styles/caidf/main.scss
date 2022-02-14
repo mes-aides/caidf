@@ -1,0 +1,25 @@
+$progress-height: 4px;
+
+@import "./fonts";
+@import "./utils";
+
+@import "./desktop/composants";
+@import "./desktop/home";
+@import "./desktop/simulation";
+@import "./desktop/resultats";
+@import "./desktop/buttons";
+@import "./desktop/inputs";
+
+/* TABLET IMPORTS */
+@media (max-width: 768px) {
+  @import "./tablet/home";
+  @import "./tablet/simulation";
+  @import "./tablet/resultat";
+  @import "./tablet/composants";
+}
+
+/* MOBILE IMPORTS */
+@media (max-width: 576px) {
+  @import "./mobile/home";
+  @import "./mobile/simulation";
+}

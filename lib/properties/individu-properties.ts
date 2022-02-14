@@ -5,7 +5,7 @@ const { capitalize, yearsAgo } = require("../utils")
 const Scolarite = require("../scolarite")
 const { getAnswer } = require("../answers")
 
-export default {
+const props = {
   aah_restriction_substantielle_durable_acces_emploi: new Property({
     question: ({ individu }) => {
       return `${Individu.label(
@@ -667,3 +667,13 @@ export default {
     ],
   }),
 }
+
+try {
+  const { default: {addProperties} } = require("../additional-questions")
+  addProperties(props)
+} catch (e) {
+  console.log(e)
+}
+
+
+export default props

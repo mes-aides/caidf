@@ -1,0 +1,12 @@
+label: rubrique Budget de notre newsletter
+institution: credit_agricole
+description: >
+  Newsletter personnalisée, choisissez la thématique budget parmi 3 thèmes qui vous intéressent
+  le plus et recevez une fois par mois gratuitement des bons plans pour maitriser votre budget.
+link: https://cadif.massmailing-grp-ext.credit-agricole.fr/mes-themes/test/23
+instructions: https://cadif.massmailing-grp-ext.credit-agricole.fr/mes-themes/test/23
+prefix: la
+type: bool
+periodicite: ponctuelle
+top: 116
+cta: Je personnalise

@@ -1,6 +1,8 @@
-// FROM BOOTSTRAP
+@import "caidf/_style-params";
+
+// FROM BOOTSTRAPv
 $font-size-base: 15px;
-$font-size-h2: floor(($font-size-base * 2.15)); // ~30px
+$font-size-h2: $font-heading-2-bold-font-size;
 // END FROM BOOTSTRAP
 
 $text-color: lighten(#000, 20%);
@@ -13,30 +15,23 @@ $screen-smaller-than-mobile: 399px;
   --theme-border-radius: 3px;
   --theme-dark-text: #26353f;
   --darkest-grey: #4f4f4f;
-  --green: #40ceb3;
-  --light-green: #8ee2d2; //40ceb3;//#51d27d;
+  --theme-primary: #{$color-primaire};
+  --theme-primary-dark: #{$color-secondaire};
+  --theme-primary-darker: #{$color-secondaire};
+  --theme-primary-light: #{white};
+  --theme-primary-lighter: #{$color-primaire};
+  --green: #{$color-success-100};
+  --light-green: #{$color-accent};
   --lighter-green: #f6fdfb; //#eefbf2;
   --lighter-green-shadow: #8ee2d2; //#f6fdfb;//#2fac66;
   --space-xs: 20px;
+
+  --theme-warning-bg: #{$color-warning-30};
+  --theme-warning-border: #{$color-warning-30};
 }
 
 body {
   background-color: #f2f5f9;
-}
-
-@font-face {
-  font-family: "Marianne";
-  src: url("../fonts/Marianne-Regular.woff2") format("truetype");
-}
-
-@font-face {
-  font-family: "MarianneBold";
-  src: url("../fonts/Marianne-Bold.woff2") format("truetype");
-}
-
-@font-face {
-  font-family: "MarianneExtraBold";
-  src: url("../fonts/Marianne-ExtraBold.woff2") format("truetype");
 }
 
 /* DESKTOP IMPORTS */
@@ -80,3 +75,5 @@ body {
 
 /* UTILS */
 @import "partials/utils/helpers";
+
+@import "caidf/main";

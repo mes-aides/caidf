@@ -1,0 +1,23 @@
+label: bon plan Permis
+institution: credit_agricole
+description: >-
+  Ce pack permis, en partenariat avec en voiture Simone
+  (code de la route et 20h de conduite) est proposé à tous nos clients de 18 à 30 ans.
+conditions_generales:
+  - type: age
+    operator: ">="
+    value: 18
+  - type: age
+    operator: "<="
+    value: 30
+interestFlag: _interetPermisDeConduire
+link: https://globetrotterplace-ca-paris.fr/bon-plan-permis/
+instructions: https://globetrotterplace-ca-paris.fr/bon-plan-permis/
+prefix: le
+type: float
+montant: 699
+unit: €
+legend: à la place de 1518€
+periodicite: ponctuelle
+top: 116
+cta: Je passe mon permis

@@ -20,6 +20,7 @@ const StateService = {
             failure.toString()
           )
         } else {
+          console.log(failure)
           throw new Error(failure)
         }
       })

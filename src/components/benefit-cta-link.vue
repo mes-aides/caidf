@@ -20,9 +20,9 @@
 import StatisticsMixin from "@/mixins/statistics"
 
 let typeLabels = {
-  teleservice: "Faire une demande en ligne",
-  form: "Accéder au formulaire papier",
-  instructions: "Accéder aux instructions",
+  teleservice: "Je fais une demande en ligne",
+  form: "J'accède au formulaire papier",
+  instructions: "J'accède aux instructions",
   link: "Plus d'informations <i class='fa fa-external-link' aria-hidden='true' role='presentation'></i>",
 }
 
@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     label: function () {
-      return typeLabels[this.type]
+      return (this.type !== "link" && this.benefit.cta) || typeLabels[this.type]
     },
     longLabel: function () {
       return `${longLabels[this.type]} pour ${this.benefit.prefix || ""}${

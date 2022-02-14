@@ -46,13 +46,15 @@ module.exports = {
   },
 
   ignorePatterns: [
-    "node_modules",
-    ".tmp",
+    "contribuer",
     "dist",
     "IndividuForm.vue",
-    "tmp",
+    "node_modules",
+    "public",
     "test/integration",
-    "contribuer",
+    ".tmp",
+    "tmp",
+    "*.min.js",
   ],
 
   overrides: [

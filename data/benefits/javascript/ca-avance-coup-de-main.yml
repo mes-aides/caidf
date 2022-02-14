@@ -1,0 +1,16 @@
+label: avance coup de main
+institution: credit_agricole
+description:
+  Nous pensons qu’être à découvert n’est pas une fatalité. Pour vous accompagner au mieux lors
+  d'une difficulté financière passagère profitez d’un prêt que vous ne commencerez à rembourser que dans 3 mois.
+conditions_generales:
+  - type: age
+    operator: ">"
+    value: 30
+link: https://www.credit-agricole.fr/ca-paris/particulier/campagnes/pret-avance-coup-de-main.html
+instructions: https://www.credit-agricole.fr/ca-paris/particulier/campagnes/pret-avance-coup-de-main.html
+prefix: l’
+type: bool
+periodicite: ponctuelle
+top: 112
+cta: Faire une simulation

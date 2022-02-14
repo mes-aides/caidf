@@ -1,0 +1,20 @@
+.caidf {
+  &-has-text-white {
+    color: white !important;
+  }
+  &-has-text-center {
+    text-align: center;
+  }
+
+  &-columns {
+    display: flex;
+
+    .caidf-is-half {
+      width: 50%;
+    }
+  }
+
+  &-is-full-width {
+    width: 100%;
+  }
+}

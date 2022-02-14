@@ -51,6 +51,26 @@ module.exports = {
     if (args.env?.BUNDLEANALYZE) {
       config.plugins.push(new BundleAnalyzerPlugin({}))
     }
+
+    // Remplace les fichiers pour éviter de modifier les fichiers fork
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /en-savoir-plus$/,
+        "@/context/caidf/components/en-savoir-plus.vue"
+      )
+    )
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /warning-message$/,
+        "@/context/caidf/components/warning-message"
+      )
+    )
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /views\/simulation\/resultats\/lieux.vue$/,
+        "@/context/caidf/views/lieux"
+      )
+    )
   },
   chainWebpack(config) {
     config.module

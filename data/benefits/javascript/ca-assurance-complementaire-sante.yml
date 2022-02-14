@@ -1,0 +1,17 @@
+label: assurance complémentaire santé
+institution: credit_agricole
+description: >-
+  La complémentaire Santé complète les remboursements des frais de santé pris en charge par
+  votre Régime Obligatoire. Avec l’assurance Santé du Crédit Agricole, bénéficiez des couvertures
+  adaptées à vos besoins et d’avantages spécifiques.
+conditions_generales:
+  - type: benefit
+    name: css_participation_forfaitaire
+    invert: true
+link: https://www.credit-agricole.fr/ca-paris/particulier/assurances/prevoyance/assurance-complementaire-sante.html
+teleservice: https://www.credit-agricole.fr/ca-paris/particulier/simulation-devis/assurance/devis-sante.html
+prefix: l’
+type: bool
+periodicite: ponctuelle
+top: 114
+cta: Faire une demande en ligne
