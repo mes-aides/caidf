@@ -9,3 +9,28 @@ html h6,
 html p {
   font-family: $font-body-font-family;
 }
+
+html h1 {
+  @include font-heading-1-regular();
+}
+
+html h2 {
+  @include font-heading-2-regular();
+}
+
+html h3 {
+  @include font-heading-3();
+}
+
+html h4 {
+  @include font-heading-4();
+}
+
+html h5 {
+  @include font-heading-5();
+}
+
+.aj-question {
+  font-weight: 700;
+  color: black;
+}
