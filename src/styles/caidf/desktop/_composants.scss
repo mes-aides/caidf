@@ -35,11 +35,7 @@
       }
 
       &.disable:not(.active) {
-        color: $color-30-disabled;
-
-        svg.caidf-check path {
-          fill: $color-30-disabled;
-        }
+        opacity: 0.5;
       }
 
       &.active,
@@ -52,7 +48,7 @@
         color: white;
 
         svg.caidf-check path {
-          fill: $color-success-30;
+          fill: $color-accent;
         }
       }
 
