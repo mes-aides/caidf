@@ -2,20 +2,22 @@ html {
   @include font-body();
 }
 
-html h1 {
-  @include font-heading-2-regular();
+html h1,
+html body .aj-main-container .aj-category-title h1 {
+  @include font-heading-1-regular();
+  color: $color-primaire;
 }
 
 html h2 {
-  @include font-heading-3();
+  @include font-heading-2-regular();
 }
 
 html h3 {
-  @include font-heading-4();
+  @include font-heading-3();
 }
 
 html h4 {
-  @include font-heading-5();
+  @include font-heading-4();
 }
 
 html h5 {
@@ -26,4 +28,8 @@ html h5 {
   font-size: 14px;
   font-weight: 700;
   color: black;
+}
+
+.caidf-font-body-small {
+  @include font-body-small();
 }
