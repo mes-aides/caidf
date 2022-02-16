@@ -10,10 +10,12 @@
           <div class="caidf-help-icon"
             ><img src="/mes-aides.org/img/ic_a_propos.svg"
           /></div>
-          <p
-            class="caidf-simulation-helping-text"
-            v-html="helpingContent?.text"
-          ></p>
+          <div>
+            <p
+              class="caidf-simulation-helping-text"
+              v-html="helpingContent?.text"
+            ></p>
+          </div>
           <img
             :src="helpingContent?.img"
             class="caidf-simulation-helping-img"
@@ -63,7 +65,7 @@ export default {
   data() {
     const helpingContentPerChapter = {
       profil: {
-        text: `Ces informations sont nécessaires au traitement de votre demande. Vos données personnelles ne seront pas communiquées à d'autres organismes à des fins commerciales`,
+        text: `Ces informations sont nécessaires au traitement de votre demande. Vos données personnelles ne seront pas communiquées à d'autres organismes à des fins commerciales.`,
         img: require("/public/mes-aides.org/img/girl-siting-on-table.png"),
       },
       foyer: {
@@ -81,7 +83,7 @@ export default {
         class: "planning-sheets",
       },
       projets: {
-        text: `Vos réponses niys permettront de vérifier votre éligibilité aux aides.`,
+        text: `Vos réponses nous permettront de vérifier votre éligibilité aux aides.`,
         img: require("/public/mes-aides.org/img/illustration.svg"),
       },
       recapitulatif: {
@@ -142,7 +144,7 @@ export default {
       return this.chapters.find((chapter) => chapter.current)
     },
     helpingContent() {
-      return this.helpingContentPerChapter[this.currentChaper.name]
+      return this.helpingContentPerChapter[this.currentChaper?.name]
     },
   },
   methods: {
