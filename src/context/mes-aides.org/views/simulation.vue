@@ -6,9 +6,20 @@
     <Breadcrumb />
     <div class="caidf-simulation-content">
       <div class="caidf-simulation-helping-block">
-        <div class="caidf-help-icon">Icon i</div>
-        <p class="caidf-simulation-helping-text" v-html="helpingText"></p>
-        <img :src="helpingImg" class="caidf-simulation-helping-img" />
+        <div class="caidf-simulation-helping-block-content">
+          <div class="caidf-help-icon"
+            ><img src="/mes-aides.org/img/ic_a_propos.svg"
+          /></div>
+          <p
+            class="caidf-simulation-helping-text"
+            v-html="helpingContent?.text"
+          ></p>
+          <img
+            :src="helpingContent?.img"
+            class="caidf-simulation-helping-img"
+            :class="helpingContent?.class"
+          />
+        </div>
       </div>
       <div class="caidf-simulation-survey">
         <div
@@ -53,20 +64,21 @@ export default {
     const helpingContentPerChapter = {
       profil: {
         text: `Ces informations sont nécessaires au traitement de votre demande. Vos données personnelles ne seront pas communiquées à d'autres organismes à des fins commerciales`,
-        img: require("/public/mes-aides.org/img/illustration.svg"),
+        img: require("/public/mes-aides.org/img/girl-siting-on-table.png"),
       },
       foyer: {
-        text: `Vos réponses niys permettront de vérifier votre éligibilité aux aides.`,
-        img: require("/public/mes-aides.org/img/illustration.svg"),
+        text: `Vos réponses nous permettront de vérifier votre éligibilité aux aides.`,
+        img: require("/public/mes-aides.org/img/girl-siting-on-table.png"),
       },
       logement: {
-        text: `Vos réponses niys permettront de vérifier votre éligibilité aux aides.`,
-        img: require("/public/mes-aides.org/img/illustration.svg"),
+        text: `Vos réponses nous permettront de vérifier votre éligibilité aux aides..`,
+        img: require("/public/mes-aides.org/img/girl-siting-on-table.png"),
       },
       revenus: {
         text: `Sélectionnez les types de ressources perçues depuis <strong>${this.$store.state.dates.twelveMonthsAgo.label}</strong
       >. Vous pourrez ensuite saisir les montants.`,
-        img: require("/public/mes-aides.org/img/illustration.svg"),
+        img: require("/public/mes-aides.org/img/planning-sheets.png"),
+        class: "planning-sheets",
       },
       projets: {
         text: `Vos réponses niys permettront de vérifier votre éligibilité aux aides.`,
@@ -129,11 +141,8 @@ export default {
     currentChaper() {
       return this.chapters.find((chapter) => chapter.current)
     },
-    helpingText() {
-      return this.helpingContentPerChapter[this.currentChaper.name]?.text
-    },
-    helpingImg() {
-      return this.helpingContentPerChapter[this.currentChaper.name]?.img
+    helpingContent() {
+      return this.helpingContentPerChapter[this.currentChaper.name]
     },
   },
   methods: {

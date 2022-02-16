@@ -12,19 +12,40 @@
       background-color: $color-primaire;
       color: white;
 
+      .caidf-simulation-helping-block-content {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 88px;
+
+        height: calc(100vh - 72px - 16px);
+      }
+
       .caidf-help-icon {
-        margin: 32px 0;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 64px;
+        margin-bottom: 32px;
+
+        img {
+          height: 45px;
+          width: 45px;
+        }
       }
 
       .caidf-simulation-helping-text {
         margin-bottom: 32px;
         text-align: center;
+        font-size: 20px;
       }
 
       .caidf-simulation-helping-img {
         margin-top: auto;
         max-width: 100%;
+
+        &.planning-sheets {
+          margin-bottom: 32px;
+        }
       }
     }
 
