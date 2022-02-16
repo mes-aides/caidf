@@ -3,11 +3,12 @@
   align-items: center;
   background-color: $color-secondaire;
   color: white;
+  height: 72px;
 
   .caidf-breadcrumb {
     display: flex;
     align-items: center;
-    margin: 24px auto;
+    margin: 0 auto;
 
     .caidf-breadcrumb-arrow {
       margin: 0 16px;
