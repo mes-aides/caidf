@@ -1,0 +1,29 @@
+html {
+  @include font-body();
+}
+
+html h1 {
+  @include font-heading-2-regular();
+}
+
+html h2 {
+  @include font-heading-3();
+}
+
+html h3 {
+  @include font-heading-4();
+}
+
+html h4 {
+  @include font-heading-5();
+}
+
+html h5 {
+  @include font-heading-5();
+}
+
+.aj-question {
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+}
