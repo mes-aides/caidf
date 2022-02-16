@@ -84,7 +84,7 @@ export default {
       },
       projets: {
         text: `Vos réponses nous permettront de vérifier votre éligibilité aux aides.`,
-        img: require("/public/mes-aides.org/img/illustration.svg"),
+        img: require("/public/mes-aides.org/img/girl-siting-on-table.png"),
       },
       recapitulatif: {
         text: `Retrouvez l'ensemble de vos réponses dans cette page.`,
