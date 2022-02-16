@@ -1,10 +1,20 @@
-.aj-simulation {
+html body .aj-simulation {
   min-height: 100%;
+  background: white;
 
   .caidf-simulation-content {
     $helping-text-size: 30%;
     display: flex;
     position: relative;
+
+    &.full-width {
+      .caidf-simulation-helping-block {
+        display: none;
+      }
+      .caidf-simulation-survey {
+        width: 100%;
+      }
+    }
 
     .caidf-simulation-helping-block {
       padding: 0 4%;

@@ -1,0 +1,25 @@
+.caidf-resultats {
+  .caidf-resultats-title-content {
+    margin: 60px auto 32px auto;
+    max-width: 700px;
+    text-align: center;
+
+    h1,
+    p {
+      text-align: center;
+    }
+
+    .caidf-benefits-count {
+      font-weight: 700;
+      span {
+        font-size: 24px;
+        color: $color-accent;
+      }
+    }
+  }
+
+  .caidf-resultats-container {
+    padding-top: 60px;
+    background-color: $color-10-background;
+  }
+}
