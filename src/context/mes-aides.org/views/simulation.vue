@@ -1,8 +1,6 @@
 <template>
   <div class="aj-simulation">
-    <div v-if="showProgress" class="aj-complete-progress-bar">
-      <div :style="currentProgressStyle" />
-    </div>
+    <ProgressBar></ProgressBar>
     <Breadcrumb />
     <div class="caidf-simulation-content">
       <div class="caidf-simulation-helping-block">
@@ -54,10 +52,12 @@ import TitreChapitre from "@/components/titre-chapitre"
 import Progress from "@/components/progress"
 import { isStepAnswered } from "@/../lib/answers"
 import Breadcrumb from "@/context/mes-aides.org/components/breadcrumb"
+import ProgressBar from "@/components/progress-bar"
 
 export default {
   name: "Simulation",
   components: {
+    ProgressBar,
     Breadcrumb,
     TitreChapitre,
     Progress,
