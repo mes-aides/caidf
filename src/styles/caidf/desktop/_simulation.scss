@@ -34,9 +34,12 @@
       }
 
       .caidf-simulation-helping-text {
+        width: 295px;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 32px;
         text-align: center;
-        font-size: 20px;
+        font-size: 16px;
       }
 
       .caidf-simulation-helping-img {
@@ -51,6 +54,26 @@
 
     .caidf-simulation-survey {
       width: #{100% - $helping-text-size};
+      background-color: white;
+      .aj-main-container {
+        background-color: white;
+
+        .aj-box-wrapper > * {
+          box-shadow: none;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      .aj-category-title-wrapper {
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .aj-actions {
+        left: 0;
+      }
     }
   }
 }
