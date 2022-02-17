@@ -47,7 +47,8 @@ html {
   }
 
   // Override class font
-  button.button {
+  button.button,
+  .aj-main-container .aj-tooltip:before {
     font-family: "Open Sans" !important;
   }
 }
