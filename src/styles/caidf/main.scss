@@ -3,3 +3,8 @@
 @import "./desktop/composants";
 @import "./desktop/simulation";
 @import "./desktop/resultats";
+
+/* TABLET IMPORTS */
+@media (max-width: 768px) {
+  @import "./tablet/simulation";
+}
