@@ -1,35 +1,53 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/caidf/OpenSans-Regular.ttf") format("truetype");
+}
+
 html {
   @include font-body();
-}
 
-html h1,
-html body .aj-main-container .aj-category-title h1 {
-  @include font-heading-1-regular();
-  color: $color-primaire;
-}
+  body {
+    &,
+    a {
+      font-family: "Open Sans";
+    }
+  }
 
-html h2 {
-  @include font-heading-2-regular();
-}
+  h1,
+  body .aj-main-container .aj-category-title h1 {
+    @include font-heading-1-regular();
+    color: $color-primaire;
+  }
 
-html h3 {
-  @include font-heading-3();
-}
+  h2 {
+    @include font-heading-2-regular();
+  }
 
-html h4 {
-  @include font-heading-4();
-}
+  h3 {
+    @include font-heading-3();
+  }
 
-html h5 {
-  @include font-heading-5();
-}
+  h4 {
+    @include font-heading-4();
+  }
 
-.aj-question {
-  font-size: 14px;
-  font-weight: 700;
-  color: black;
-}
+  h5 {
+    @include font-heading-5();
+  }
 
-.caidf-font-body-small {
-  @include font-body-small();
+  body .aj-question {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Open Sans";
+    color: black;
+  }
+
+  .caidf-font-body-small {
+    @include font-body-small();
+  }
+
+  // Override class font
+  button.button {
+    font-family: "Open Sans" !important;
+  }
 }
