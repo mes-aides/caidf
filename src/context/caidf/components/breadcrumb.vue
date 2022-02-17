@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import ArrowRight from "@/context/mes-aides.org/components/arrow-right"
-import Check from "@/context/mes-aides.org/components/check"
+import ArrowRight from "@/context/caidf/components/arrow-right"
+import Check from "@/context/caidf/components/check"
 export default {
   name: "Breadcrumb",
   components: { Check, ArrowRight },

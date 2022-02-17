@@ -1,2 +1,2 @@
-import mesAides from "./mes-aides.org"
+import mesAides from "./caidf"
 export default mesAides
