@@ -6,7 +6,7 @@
       <div class="caidf-simulation-helping-block">
         <div class="caidf-simulation-helping-block-content">
           <div class="caidf-help-icon"
-            ><img src="/mes-aides.org/img/ic_a_propos.svg"
+            ><img src="/caidf/img/ic_a_propos.svg"
           /></div>
           <div>
             <p
