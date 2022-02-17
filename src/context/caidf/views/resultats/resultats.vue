@@ -86,7 +86,7 @@ import LoadingModal from "@/components/loading-modal"
 import ResultatsMixin from "@/mixins/resultats"
 import StatisticsMixin from "@/mixins/statistics"
 import ProgressBar from "@/components/progress-bar"
-import Breadcrumb from "@/context/mes-aides.org/components/breadcrumb"
+import Breadcrumb from "@/context/caidf/components/breadcrumb"
 
 export default {
   name: "SimulationResultats",
