@@ -20,6 +20,10 @@
         </router-link>
       </template>
     </div>
+    <div class="caidf-breadcrumb tablet">
+      <strong>{{ currentChapterIndex + 1 }}/{{ chapters.length }}</strong
+      >&nbsp;{{ chapters[currentChapterIndex]?.breadcrumb }}</div
+    >
   </div>
 </template>
 
@@ -37,14 +41,8 @@ export default {
         this.$store.getters.lastUnansweredStep?.path
       )
     },
-    isRecapitulatif() {
-      return this.$route.name === "recapitulatif"
-    },
-    isResultsPage() {
-      return (
-        this.$route.name === "resultats" ||
-        this.$route.name === "resultatsDetails"
-      )
+    currentChapterIndex() {
+      return this.chapters.findIndex((chapter) => chapter.current)
     },
   },
   methods: {
@@ -52,9 +50,6 @@ export default {
       return index === 0
         ? false
         : !chapter.done && !this.chapters[index - 1].done
-    },
-    goBack() {
-      window?.history.back()
     },
   },
 }
