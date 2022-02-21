@@ -48,7 +48,8 @@ html {
 
   // Override class font
   button.button,
-  .aj-main-container .aj-tooltip:before {
+  .aj-main-container .aj-tooltip:before,
+  .aj-main-container .aj-help-popup > *:last-child {
     font-family: "Open Sans" !important;
   }
 }
