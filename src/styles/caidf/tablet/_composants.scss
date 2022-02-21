@@ -1,0 +1,10 @@
+.caidf-breadcrumb-wrapper {
+  .caidf-breadcrumb {
+    &:not(.tablet) {
+      display: none;
+    }
+    &.tablet {
+      display: flex;
+    }
+  }
+}
