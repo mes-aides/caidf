@@ -74,7 +74,8 @@ export default {
       },
       logement: {
         text: `Vos réponses nous permettront de vérifier votre éligibilité aux aides..`,
-        img: require("/public/caidf/img/girl-siting-on-table.png"),
+        img: require("/public/caidf/img/logo-simulation-logement.svg"),
+        class: "logement",
       },
       revenus: {
         text: `Sélectionnez les types de ressources perçues depuis <strong>${this.$store.state.dates.twelveMonthsAgo.label}</strong
@@ -84,9 +85,13 @@ export default {
       },
       projets: {
         text: `Vos réponses nous permettront de vérifier votre éligibilité aux aides.`,
-        img: require("/public/caidf/img/girl-siting-on-table.png"),
+        img: require("/public/caidf/img/logo-simulation-projet.svg"),
       },
       recapitulatif: {
+        text: `Retrouvez l'ensemble de vos réponses dans cette page.`,
+        img: require("/public/caidf/img/illustration.svg"),
+      },
+      resultat: {
         text: `Retrouvez l'ensemble de vos réponses dans cette page.`,
         img: require("/public/caidf/img/illustration.svg"),
       },

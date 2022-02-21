@@ -54,10 +54,14 @@ html body .aj-simulation {
 
       .caidf-simulation-helping-img {
         margin-top: auto;
+        max-height: 400px;
         max-width: 100%;
 
         &.planning-sheets {
           margin-bottom: 32px;
+        }
+        &.logement {
+          margin-bottom: 90px;
         }
       }
     }
