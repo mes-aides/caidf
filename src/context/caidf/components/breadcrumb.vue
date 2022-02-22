@@ -21,8 +21,8 @@
       </template>
     </div>
     <div class="caidf-breadcrumb tablet">
-      <strong>{{ currentChapterIndex + 1 }}/{{ chapters.length }}</strong
-      >&nbsp;{{ chapters[currentChapterIndex]?.breadcrumb }}</div
+      <strong>{{ currentChapterIndex }}/{{ chapters.length }}</strong
+      >&nbsp;{{ currentChapterName?.breadcrumb }}</div
     >
   </div>
 </template>
@@ -30,6 +30,8 @@
 <script>
 import ArrowRight from "@/context/caidf/components/arrow-right"
 import Check from "@/context/caidf/components/check"
+import Chapters from "@/lib/chapters"
+
 export default {
   name: "Breadcrumb",
   components: { Check, ArrowRight },
@@ -42,7 +44,13 @@ export default {
       )
     },
     currentChapterIndex() {
-      return this.chapters.findIndex((chapter) => chapter.current)
+      const index = this.chapters.findIndex((chapter) => chapter.current)
+      return index >= 0
+        ? index
+        : this.chapters.filter((chapter) => chapter.done).length
+    },
+    currentChapterName() {
+      return Chapters.getChapters()[this.currentChapterIndex]
     },
   },
   methods: {
