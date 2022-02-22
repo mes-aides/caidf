@@ -89,6 +89,11 @@
   input[type="radio"],
   input[type="checkbox"] {
     left: 0 !important;
+
+    &:focus + label {
+      color: $color-primaire;
+      font-weight: 700;
+    }
   }
 
   label {
@@ -98,6 +103,7 @@
     box-shadow: none !important;
     border: none !important;
     background-color: transparent !important;
+    transition: none !important;
   }
 }
 
