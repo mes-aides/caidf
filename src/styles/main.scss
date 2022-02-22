@@ -15,6 +15,7 @@ $screen-smaller-than-mobile: 399px;
   --theme-border-radius: 3px;
   --theme-primary: #{$color-primaire};
   --theme-primary-dark: #{$color-secondaire};
+  --theme-primary-darker: #{$color-secondaire};
   --theme-primary-light: #{white};
   --theme-primary-lighter: #{$color-primaire};
   //--light-grey: #c4c4c4;
