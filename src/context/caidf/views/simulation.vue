@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import TitreChapitre from "@/components/titre-chapitre"
+import TitreChapitre from "../components/titre-chapitre"
 import Progress from "@/components/progress"
 import { isStepAnswered } from "@/../lib/answers"
 import Breadcrumb from "@/context/caidf/components/breadcrumb"
@@ -89,11 +89,8 @@ export default {
       },
       recapitulatif: {
         text: `Retrouvez l'ensemble de vos réponses dans cette page.`,
-        img: require("/public/caidf/img/illustration.svg"),
-      },
-      resultat: {
-        text: `Retrouvez l'ensemble de vos réponses dans cette page.`,
-        img: require("/public/caidf/img/illustration.svg"),
+        img: require("/public/caidf/img/planning-sheets.png"),
+        class: "planning-sheets",
       },
     }
     return {
@@ -146,7 +143,9 @@ export default {
       )
     },
     currentChaper() {
-      return this.chapters.find((chapter) => chapter.current)
+      return this.$route.name === "recapitulatif"
+        ? { name: "recapitulatif" }
+        : this.chapters.find((chapter) => chapter.current)
     },
     helpingContent() {
       return this.helpingContentPerChapter[this.currentChaper?.name]
