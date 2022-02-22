@@ -62,3 +62,42 @@
     }
   }
 }
+
+.caidf-recapitulatif-button {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 3px;
+  background-color: $color-primaire;
+  opacity: 0.6;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primaire !important;
+    opacity: 1;
+  }
+
+  img {
+    margin: auto;
+    width: 18px;
+    height: 24px;
+  }
+}
+
+.aj-selections .aj-selection-wrapper,
+.aj-selection-wrapper {
+  input[type="radio"],
+  input[type="checkbox"] {
+    left: 0 !important;
+  }
+
+  label {
+    width: auto !important;
+    min-width: 0px !important;
+    margin-left: 36px;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background-color: transparent !important;
+  }
+}
