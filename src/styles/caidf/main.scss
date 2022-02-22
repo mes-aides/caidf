@@ -7,5 +7,11 @@
 /* TABLET IMPORTS */
 @media (max-width: 768px) {
   @import "./tablet/simulation";
+  @import "./tablet/simulation";
   @import "./tablet/composants";
+}
+
+/* MOBILE IMPORTS */
+@media (max-width: 576px) {
+  @import "./mobile/simulation";
 }
