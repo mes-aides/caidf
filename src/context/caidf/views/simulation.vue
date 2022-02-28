@@ -9,10 +9,7 @@
             ><img src="/caidf/img/ic_a_propos.svg"
           /></div>
           <div>
-            <p
-              class="caidf-simulation-helping-text"
-              v-html="helpingContent?.text"
-            ></p>
+            <p class="caidf-simulation-helping-text" v-html="helpingText"></p>
           </div>
           <img
             :src="helpingContent?.img"
@@ -33,8 +30,16 @@
                 >Quitter le mode debug</button
               >
             </div>
-            <div v-if="$store.state.message.text" class="notification warning">
-              <div class="message" v-html="$store.state.message.text" />
+            <div
+              v-if="$store.state.message.text"
+              class="notification warning caidf-notification"
+            >
+              <Alert></Alert>
+              <div class="caidf-font-body-small caidf-font-bold">WARNING</div>
+              <div
+                class="caidf-font-body-small"
+                v-html="$store.state.message.text"
+              />
             </div>
             <div class="aj-box-wrapper">
               <router-view :key="$route.path" />
@@ -53,10 +58,13 @@ import Progress from "@/components/progress"
 import { isStepAnswered } from "@/../lib/answers"
 import Breadcrumb from "@/context/caidf/components/breadcrumb"
 import ProgressBar from "@/components/progress-bar"
+import Hint from "@/lib/hint"
+import Alert from "@/context/caidf/icons/alert"
 
 export default {
   name: "Simulation",
   components: {
+    Alert,
     ProgressBar,
     Breadcrumb,
     TitreChapitre,
@@ -149,6 +157,16 @@ export default {
     },
     helpingContent() {
       return this.helpingContentPerChapter[this.currentChaper?.name]
+    },
+    attribute: function () {
+      return this.$route.path.substring(this.$route.path.lastIndexOf("/") + 1)
+    },
+    source: function () {
+      return this.$route.path
+    },
+    helpingText() {
+      const hint = Hint.get(this.attribute, this.source)
+      return hint || this.helpingContent?.text
     },
   },
   methods: {
