@@ -84,7 +84,7 @@
 </template>
 
 <script>
-import DroitsDetails from "@/components/droits-details.vue"
+import DroitsDetails from "@/context/caidf/components/droit-details"
 import LoadingModal from "@/components/loading-modal"
 import ResultatsMixin from "@/mixins/resultats"
 import StatisticsMixin from "@/mixins/statistics"
