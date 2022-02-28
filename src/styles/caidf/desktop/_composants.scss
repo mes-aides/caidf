@@ -108,10 +108,33 @@
 }
 
 html body .aj-main-container .aj-help-popup {
+  display: none;
+  padding: 6px;
   font-size: 14px;
   line-height: 20px;
+
+  img {
+    height: 20px;
+    width: 20px;
+  }
 }
 
 button.button {
   box-shadow: none !important;
+}
+
+.caidf-notification {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 16px;
+    path {
+      fill: $color-warning-100;
+    }
+  }
+
+  .caidf-font-bold {
+    margin-right: 16px;
+  }
 }
