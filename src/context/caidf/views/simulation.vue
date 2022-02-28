@@ -73,7 +73,7 @@ export default {
         img: require("/public/caidf/img/girl-siting-on-table.png"),
       },
       logement: {
-        text: `Vos réponses nous permettront de vérifier votre éligibilité aux aides..`,
+        text: `Vos réponses nous permettront de vérifier votre éligibilité aux aides.`,
         img: require("/public/caidf/img/logo-simulation-logement.svg"),
         class: "logement",
       },
