@@ -156,7 +156,10 @@ export default {
         : this.chapters.find((chapter) => chapter.current)
     },
     helpingContent() {
-      return this.helpingContentPerChapter[this.currentChaper?.name]
+      return (
+        this.helpingContentPerChapter[this.currentChaper?.name] ||
+        this.helpingContentPerChapter.profil
+      )
     },
     attribute: function () {
       return this.$route.path.substring(this.$route.path.lastIndexOf("/") + 1)
@@ -166,7 +169,7 @@ export default {
     },
     helpingText() {
       const hint = Hint.get(this.attribute, this.source)
-      return hint || this.helpingContent?.text
+      return hint || this.helpingContent.text
     },
   },
   methods: {
