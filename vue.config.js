@@ -49,6 +49,14 @@ module.exports = {
     if (args.env?.BUNDLEANALYZE) {
       config.plugins.push(new BundleAnalyzerPlugin({}))
     }
+
+    // Remplace les fichiers pour éviter de modifier les fichiers fork
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /en-savoir-plus$/,
+        "@/context/caidf/components/en-savoir-plus.vue"
+      )
+    )
   },
   chainWebpack(config) {
     config.module

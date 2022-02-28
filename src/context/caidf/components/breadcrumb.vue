@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import ArrowRight from "@/context/caidf/components/arrow-right"
-import Check from "@/context/caidf/components/check"
+import ArrowRight from "@/context/caidf/icons/arrow-right"
+import Check from "@/context/caidf/icons/check"
 import Chapters from "@/lib/chapters"
 
 export default {
