@@ -3,6 +3,11 @@
   src: url("../fonts/caidf/OpenSans-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Open Sans Semi-bold";
+  src: url("../fonts/caidf/OpenSans-SemiBold.ttf") format("truetype");
+}
+
 html {
   @include font-body();
 
@@ -56,4 +61,8 @@ html {
 
 .caidf-font-bold {
   font-weight: 700 !important;
+}
+
+.caidf-font-open-sans-semi-bold {
+  font-family: "Open Sans Semi-bold" !important;
 }
