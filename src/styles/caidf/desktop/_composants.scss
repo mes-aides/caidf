@@ -28,6 +28,8 @@
       align-items: center;
       color: white;
 
+      text-decoration: none;
+
       svg {
         height: 24px;
         width: 24px;
@@ -42,10 +44,8 @@
         opacity: 0.5;
       }
 
-      &.active,
       &.disable {
         pointer-events: none;
-        text-decoration: none;
       }
 
       &.done {
