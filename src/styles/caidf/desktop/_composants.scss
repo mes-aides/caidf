@@ -68,8 +68,7 @@
   height: 40px;
   width: 40px;
   border-radius: 3px;
-  background-color: $color-primaire;
-  opacity: 0.6;
+  background-color: rgba($color-primaire, 0.6);
 
   &:hover,
   &:focus {
