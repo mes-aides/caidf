@@ -121,6 +121,11 @@ html body .aj-main-container .aj-help-popup {
 
 button.button {
   box-shadow: none !important;
+
+  &.disabled {
+    border: 1px solid $color-30-disabled !important;
+    background-color: $color-30-disabled !important;
+  }
 }
 
 .caidf-notification {
