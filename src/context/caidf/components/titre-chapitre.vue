@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Chapters from "@/lib/chapters"
+import Chapters from "@/../lib/chapters"
 
 export default {
   name: "TitreChapitre",

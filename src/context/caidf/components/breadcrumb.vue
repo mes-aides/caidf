@@ -30,7 +30,7 @@
 <script>
 import ArrowRight from "@/context/caidf/icons/arrow-right"
 import Check from "@/context/caidf/icons/check-circle"
-import Chapters from "@/lib/chapters"
+import Chapters from "@/../lib/chapters"
 
 export default {
   name: "Breadcrumb",
