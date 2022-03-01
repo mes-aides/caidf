@@ -1,0 +1,28 @@
+.caidf-recapitulatif-button {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 3px;
+  background-color: rgba($color-primaire, 0.6);
+
+  &:hover,
+  &:focus {
+    background-color: $color-primaire !important;
+    opacity: 1;
+  }
+
+  img {
+    margin: auto;
+    width: 18px;
+    height: 24px;
+  }
+}
+
+button.button {
+  box-shadow: none !important;
+
+  &.disabled {
+    border: 1px solid $color-30-disabled !important;
+    background-color: $color-30-disabled !important;
+  }
+}
