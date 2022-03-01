@@ -101,4 +101,34 @@ html body .aj-simulation {
       margin-left: 24px;
     }
   }
+
+  #add-pac {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-primaire;
+    color: white;
+    font-family: "Open Sans Semi-bold" !important;
+    text-transform: uppercase;
+
+    padding: 24px 28px;
+
+    &:hover {
+      background-color: white;
+      color: $color-primaire;
+
+      svg path {
+        fill: $color-primaire;
+      }
+    }
+
+    svg {
+      margin-bottom: 12px;
+      height: 24px;
+      width: 24px;
+
+      path {
+        fill: white;
+      }
+    }
+  }
 }
