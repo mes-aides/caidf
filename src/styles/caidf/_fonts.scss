@@ -47,6 +47,10 @@ html {
     color: black;
   }
 
+  body h3.aj-question {
+    text-transform: none !important;
+  }
+
   .caidf-font-body-small {
     @include font-body-small();
   }
