@@ -42,9 +42,6 @@
 
       &.disable:not(.active) {
         opacity: 0.5;
-      }
-
-      &.disable {
         pointer-events: none;
       }
 
