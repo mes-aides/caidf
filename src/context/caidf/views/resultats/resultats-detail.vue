@@ -38,7 +38,7 @@
 import DroitsDetails from "@/context/caidf/components/droits-details"
 import ResultatsMixin from "@/mixins/resultats"
 import StatisticsMixin from "@/mixins/statistics"
-import ResultatBase from "@/context/caidf/views/resultats/ResultatBase"
+import ResultatBase from "@/context/caidf/views/resultats/resultat-base"
 
 export default {
   name: "SimulationResultatsDetail",
