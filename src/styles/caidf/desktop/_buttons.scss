@@ -1,15 +1,18 @@
+.light-primary-button {
+  border: none !important;
+  background-color: rgba($color-primaire, 0.6) !important;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primaire !important;
+  }
+}
+
 .caidf-recapitulatif-button {
   display: flex;
   height: 40px;
   width: 40px;
   border-radius: 3px;
-  background-color: rgba($color-primaire, 0.6);
-
-  &:hover,
-  &:focus {
-    background-color: $color-primaire !important;
-    opacity: 1;
-  }
 
   img {
     margin: auto;
