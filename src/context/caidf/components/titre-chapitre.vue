@@ -5,7 +5,7 @@
       <router-link
         v-if="showMenuButton"
         :to="{ name: 'recapitulatif' }"
-        class="caidf-recapitulatif-button"
+        class="caidf-recapitulatif-button light-primary-button"
       >
         <img src="/caidf/img/ic_document.svg" alt="Bouton récapitulatif" />
       </router-link>
