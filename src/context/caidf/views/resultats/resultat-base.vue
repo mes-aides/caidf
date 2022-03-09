@@ -23,6 +23,18 @@
               >
             </div>
           </template>
+          <div class="caidf-resultats-button">
+            <router-link
+              class="button light-primary-button"
+              to="/recapitulatif"
+            >
+              <img
+                src="/caidf/img/ic_document.svg"
+                alt="Bouton récapitulatif"
+              />
+              <span>Je modifie ma simulation</span>
+            </router-link>
+          </div>
         </div>
       </div>
       <div class="caidf-resultats-container">
