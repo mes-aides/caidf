@@ -57,6 +57,12 @@ module.exports = {
         "@/context/caidf/components/en-savoir-plus.vue"
       )
     )
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /warning-message$/,
+        "@/context/caidf/components/warning-message"
+      )
+    )
   },
   chainWebpack(config) {
     config.module
