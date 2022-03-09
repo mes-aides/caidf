@@ -30,17 +30,12 @@
                 >Quitter le mode debug</button
               >
             </div>
-            <div
-              v-if="$store.state.message.text"
-              class="notification warning caidf-notification"
-            >
-              <Alert></Alert>
-              <div class="caidf-font-body-small caidf-font-bold">WARNING</div>
+            <WarningMessage v-if="$store.state.message.text">
               <div
                 class="caidf-font-body-small"
                 v-html="$store.state.message.text"
               />
-            </div>
+            </WarningMessage>
             <div class="aj-box-wrapper">
               <router-view :key="$route.path" />
             </div>
@@ -59,12 +54,12 @@ import { isStepAnswered } from "@/../lib/answers"
 import Breadcrumb from "@/context/caidf/components/breadcrumb"
 import ProgressBar from "@/components/progress-bar"
 import Hint from "@/lib/hint"
-import Alert from "@/context/caidf/icons/alert"
+import WarningMessage from "@/components/warning-message"
 
 export default {
   name: "Simulation",
   components: {
-    Alert,
+    WarningMessage,
     ProgressBar,
     Breadcrumb,
     TitreChapitre,
