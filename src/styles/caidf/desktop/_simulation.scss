@@ -28,7 +28,9 @@ html body .aj-simulation {
         position: sticky;
         top: 88px;
 
-        height: calc(100vh - 72px - 16px);
+        height: calc(
+          100vh - 72px - #{$progress-height}
+        ); // full screen height - breadcrumb - progress-bar
       }
 
       .caidf-help-icon {
