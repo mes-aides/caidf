@@ -1,102 +1,47 @@
 <template>
-  <div class="aj-simulation caidf-resultats">
-    <ProgressBar></ProgressBar>
-    <Breadcrumb />
-    <div>
-      <div class="caidf-resultats-title">
-        <div class="caidf-resultats-title-content">
-          <h1>Résultat de votre simulation</h1>
-          <template v-if="shouldDisplayResults">
-            <div v-if="!isEmpty(droits)">
-              <div
-                >D’après la situation que vous avez déclaré, vous êtes à priori
-                éligible à :
-              </div>
-              <div class="caidf-benefits-count"
-                ><span>{{ droits.length }} aides</span>
-                pour optimiser votre budget
-              </div>
-              <p class="caidf-font-body-small"
-                >Ces résultats sont fondés sur les seules informations que vous
-                avez indiquées et ne constituent en aucune façon un engagement
-                de la part des organismes cités.</p
-              >
-            </div>
-            <div v-else>
-              <p> Pas de résultats </p>
-            </div>
-          </template>
-        </div>
-      </div>
-      <div class="caidf-resultats-container">
-        <div class="container aj-layout-container">
-          <div class="aj-main-container">
-            <div class="aj-box-wrapper">
-              <div class="aj-unbox">
-                <LoadingModal
-                  v-if="accessStatus.fetching || resultatStatus.updating"
-                >
-                  <p v-show="accessStatus.fetching">
-                    Récupération de la situation en cours…
-                  </p>
-                  <p v-show="resultatStatus.updating">
-                    Calcul en cours de vos droits…
-                  </p>
-                </LoadingModal>
-
-                <div v-if="hasWarning" class="notification warning">
-                  <div>
-                    <h2>
-                      <i class="fa fa-warning" aria-hidden="true" /> Aucun
-                      résultat disponible
-                    </h2>
-                    <h3>
-                      La simulation à laquelle vous souhaitez accéder n‘est pas
-                      accessible.
-                    </h3>
-                    <p class="aj-results-intro">
-                      Pour commencer votre simulation, rendez-vous sur la
-                      <router-link to="home"> page d'accueil </router-link>.
-                    </p>
-                  </div>
-                </div>
-
-                <ErrorBlock v-if="hasError" />
-                <ErrorSaveBlock v-if="hasErrorSave" />
-
-                <div v-show="shouldDisplayResults">
-                  <div v-if="!isEmpty(droits)">
-                    <DroitsList :droits="droits" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <ResultatBase>
+    <div v-if="hasWarning" class="notification warning">
+      <div>
+        <h2>
+          <i class="fa fa-warning" aria-hidden="true" /> Aucun résultat
+          disponible
+        </h2>
+        <h3>
+          La simulation à laquelle vous souhaitez accéder n‘est pas accessible.
+        </h3>
+        <p class="aj-results-intro">
+          Pour commencer votre simulation, rendez-vous sur la
+          <router-link to="home"> page d'accueil </router-link>.
+        </p>
       </div>
     </div>
-  </div>
+
+    <ErrorBlock v-if="hasError" />
+    <ErrorSaveBlock v-if="hasErrorSave" />
+
+    <div v-show="shouldDisplayResults">
+      <div v-if="!isEmpty(droits)">
+        <DroitsList :droits="droits" />
+      </div>
+    </div>
+  </ResultatBase>
 </template>
 
 <script>
 import DroitsList from "@/components/droits-list"
 import ErrorBlock from "@/components/error-block"
 import ErrorSaveBlock from "@/components/error-save-block"
-import LoadingModal from "@/components/loading-modal"
 import ResultatsMixin from "@/mixins/resultats"
 import StatisticsMixin from "@/mixins/statistics"
-import ProgressBar from "@/components/progress-bar"
-import Breadcrumb from "@/context/caidf/components/breadcrumb"
+import ResultatBase from "@/context/caidf/views/resultats/ResultatBase"
 
 export default {
   name: "SimulationResultats",
   components: {
-    ProgressBar,
-    Breadcrumb,
+    ResultatBase,
     DroitsList,
     ErrorBlock,
     ErrorSaveBlock,
-    LoadingModal,
   },
   mixins: [ResultatsMixin, StatisticsMixin],
   mounted: function () {
