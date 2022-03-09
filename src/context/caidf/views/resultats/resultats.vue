@@ -33,7 +33,7 @@ import ErrorBlock from "@/components/error-block"
 import ErrorSaveBlock from "@/components/error-save-block"
 import ResultatsMixin from "@/mixins/resultats"
 import StatisticsMixin from "@/mixins/statistics"
-import ResultatBase from "@/context/caidf/views/resultats/ResultatBase"
+import ResultatBase from "@/context/caidf/views/resultats/resultat-base"
 
 export default {
   name: "SimulationResultats",
