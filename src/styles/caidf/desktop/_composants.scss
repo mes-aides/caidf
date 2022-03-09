@@ -110,3 +110,7 @@ html body .aj-main-container .aj-help-popup {
     margin-right: 16px;
   }
 }
+
+html body > .aj-website .aj-complete-progress-bar {
+  height: $progress-height;
+}
