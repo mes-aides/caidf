@@ -26,7 +26,7 @@
           <div class="caidf-resultats-button">
             <router-link
               class="button light-primary-button"
-              to="/recapitulatif"
+              :to="{ name: 'recapitulatif' }"
             >
               <img
                 src="/caidf/img/ic_document.svg"
