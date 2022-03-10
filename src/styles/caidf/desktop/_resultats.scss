@@ -83,4 +83,17 @@
       margin-left: 8px;
     }
   }
+
+  .aj-droit-pro-agricole {
+    display: flex !important;
+    align-items: center;
+
+    svg {
+      margin-right: 8px;
+
+      path {
+        fill: $color-accent;
+      }
+    }
+  }
 }
