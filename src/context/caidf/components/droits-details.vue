@@ -113,8 +113,8 @@
             class="aj-droit-pro-agricole"
             href="https://www.msa.fr/lfy/espace-prive"
           >
-            <img src="@/assets/images/doigt.svg" /> Démarches pour les
-            professions agricoles
+            <Export></Export>
+            <span>Démarches pour les professions agricoles</span>
           </a>
 
           <div class="is-align-vertically-center">
@@ -144,10 +144,12 @@ import Situation from "@/lib/situation"
 import DroitMixin from "@/mixins/droit-mixin"
 import DroitHeader from "@/components/droit-header"
 import Check from "@/context/caidf/icons/check"
+import Export from "@/context/caidf/icons/export"
 
 export default {
   name: "DroitsDetails",
   components: {
+    Export,
     Check,
     DroitHeader,
     BenefitCta,
