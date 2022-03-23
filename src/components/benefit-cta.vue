@@ -21,7 +21,7 @@
         action: 'show-locations',
         category: 'General',
       }"
-      class="button primary"
+      class="button outline"
       :to="{
         name: 'resultatsLieuxDedies',
         params: { benefit_id: benefit.id },
