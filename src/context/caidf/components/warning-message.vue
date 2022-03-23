@@ -1,7 +1,6 @@
 <template>
   <div class="notification warning caidf-notification">
     <Alert></Alert>
-    <div class="caidf-font-body-small caidf-font-bold">WARNING</div>
     <slot></slot>
   </div>
 </template>
