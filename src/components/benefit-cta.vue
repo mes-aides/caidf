@@ -23,7 +23,7 @@
         params: { benefit_id: benefit.id },
       }"
     >
-      À proximité de chez vous
+      Je trouve un centre proche de chez moi
     </router-link>
   </div>
 </template>
