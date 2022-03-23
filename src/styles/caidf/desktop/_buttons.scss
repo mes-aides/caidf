@@ -29,3 +29,32 @@ button.button {
     background-color: $color-30-disabled !important;
   }
 }
+
+.caidf-back-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+  background-color: transparent;
+  color: $color-primaire;
+  font-family: "Open Sans Semi-bold";
+  font-size: 16px;
+  text-decoration: none;
+
+  svg {
+    transform: rotate(180deg);
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+
+    path {
+      fill: $color-primaire;
+    }
+  }
+
+  &:hover {
+    svg path {
+      fill: var(--dark-blue);
+    }
+  }
+}
