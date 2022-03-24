@@ -100,4 +100,24 @@
       }
     }
   }
+
+  .aj-results-details {
+    margin-bottom: 75px;
+
+    .aj-droit-detail {
+      position: relative;
+      .caidf-invalid-link {
+        position: absolute;
+        bottom: -75px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        a {
+          padding: 10px;
+          color: $color-70-text-major;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
