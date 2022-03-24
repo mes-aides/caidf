@@ -116,23 +116,22 @@
             <Export></Export>
             <span>Démarches pour les professions agricoles</span>
           </a>
-
-          <div class="is-align-vertically-center">
-            <a
-              v-if="brokenLinkButtonState === 'show'"
-              class="text-center"
-              @click="alertBrokenLink()"
-              >Lien invalide ?</a
-            >
-            <span
-              v-else-if="brokenLinkButtonState === 'showThanksMessage'"
-              class="text-center"
-              >Merci pour votre aide ! Nous réglerons ce problème très
-              prochainement.</span
-            >
-          </div>
         </div>
       </div>
+    </div>
+    <div class="is-align-vertically-center caidf-invalid-link">
+      <a
+        v-if="brokenLinkButtonState === 'show'"
+        class="text-center"
+        @click="alertBrokenLink()"
+        >Lien invalide ?</a
+      >
+      <span
+        v-else-if="brokenLinkButtonState === 'showThanksMessage'"
+        class="text-center"
+        >Merci pour votre aide ! Nous réglerons ce problème très
+        prochainement.</span
+      >
     </div>
   </div>
 </template>
