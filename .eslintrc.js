@@ -53,6 +53,7 @@ module.exports = {
     "tmp",
     "test/integration",
     "contribuer",
+    "*.min.js",
   ],
 
   overrides: [
