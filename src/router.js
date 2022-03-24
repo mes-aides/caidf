@@ -419,6 +419,7 @@ router.afterEach((to) => {
   if (to.preventFocus) return
 
   nextTick(function () {
+    window.responsiveIframe()
     document.title = getTitleMeta(to)
 
     let title = document.querySelector("h1")
