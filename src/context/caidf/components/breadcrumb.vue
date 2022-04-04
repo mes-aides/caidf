@@ -16,7 +16,7 @@
           :tabindex="disabledLink(chapter, index) ? -1 : 0"
         >
           <Check class="caidf-check"></Check>
-          <span :title="chapter.breadcrumb">{{ chapter.breadcrumb }}</span>
+          <span :data-text="chapter.breadcrumb">{{ chapter.breadcrumb }}</span>
         </router-link>
       </template>
     </div>
