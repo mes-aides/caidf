@@ -17,13 +17,13 @@ html body .aj-simulation {
     }
 
     .caidf-simulation-helping-block {
-      overflow-y: hidden;
       padding: 0 4%;
       width: $helping-text-size;
       background-color: $color-primaire;
       color: white;
 
       .caidf-simulation-helping-block-content {
+        overflow-y: hidden;
         display: flex;
         flex-direction: column;
         position: sticky;
