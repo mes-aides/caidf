@@ -1,8 +1,10 @@
 $progress-height: 4px;
 
 @import "./fonts";
+@import "./utils";
 
 @import "./desktop/composants";
+@import "./desktop/home";
 @import "./desktop/simulation";
 @import "./desktop/resultats";
 @import "./desktop/buttons";

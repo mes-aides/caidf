@@ -1,0 +1,90 @@
+#homepage {
+  .caidf-home-section {
+    padding: 32px 67px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .caidf-home-container {
+    position: relative;
+    flex-grow: 1;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .caidf-first-section {
+    position: relative;
+    min-height: 75vh;
+    background-color: $color-first-section-home;
+
+    .caidf-home-breadcrumb {
+      display: flex;
+
+      .caidf-home-breadcrumb-arrow {
+        margin: 0 8px;
+
+        svg {
+          width: 9px;
+          height: 12px;
+        }
+      }
+
+      .caidf-home-breadcrumb-link {
+        font-size: 14px;
+        font-family: "Open Sans Semi-bold";
+        color: white;
+        text-decoration: none;
+
+        &.active {
+          font-family: "Open Sans Bold";
+        }
+      }
+    }
+
+    .caidf-hand-with-phone-img {
+      position: absolute;
+      bottom: -32px;
+      right: 0;
+      width: 35%;
+    }
+
+    .caidf-first-section-text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 66%;
+    }
+
+    h1 {
+      margin-bottom: 32px;
+      font-family: "Open Sans Bold";
+    }
+
+    p {
+      margin-bottom: 32px;
+    }
+
+    .caidf-button {
+      margin-bottom: 24px;
+    }
+
+    .caidf-accent {
+      margin-right: 24px;
+    }
+  }
+
+  .caidf-second-section {
+    background-color: $color-primaire;
+  }
+
+  .caidf-chevron-wrapper {
+    display: flex;
+    margin-bottom: 60px;
+
+    a {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
