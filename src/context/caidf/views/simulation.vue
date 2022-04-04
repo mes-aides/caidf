@@ -81,8 +81,7 @@ export default {
         class: "logement",
       },
       revenus: {
-        text: `Sélectionnez les types de ressources perçues depuis <strong>${this.$store.state.dates.twelveMonthsAgo.label}</strong
-      >. Vous pourrez ensuite saisir les montants.`,
+        text: `Vos réponses nous permettront de vérifier votre éligibilité aux aides.`,
         img: require("/public/caidf/img/planning-sheets.png"),
         class: "planning-sheets",
       },
