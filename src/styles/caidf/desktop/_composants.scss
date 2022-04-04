@@ -40,6 +40,14 @@
         color: white;
       }
 
+      span::before {
+        display: block;
+        content: attr(title);
+        font-weight: bold;
+        height: 0;
+        visibility: hidden;
+      }
+
       &.disable:not(.active) {
         opacity: 0.5;
         pointer-events: none;
