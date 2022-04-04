@@ -17,6 +17,7 @@ html body .aj-simulation {
     }
 
     .caidf-simulation-helping-block {
+      overflow-y: hidden;
       padding: 0 4%;
       width: $helping-text-size;
       background-color: $color-primaire;
