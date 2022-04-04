@@ -15,7 +15,7 @@
 
   .caidf-first-section {
     position: relative;
-    min-height: 75vh;
+    min-height: calc(100vh - 150px);
     background-color: $color-first-section-home;
 
     .caidf-home-breadcrumb {
@@ -76,6 +76,10 @@
 
   .caidf-second-section {
     background-color: $color-primaire;
+
+    .caidf-cta-wrapper {
+      margin-top: 40px;
+    }
   }
 
   .caidf-chevron-wrapper {
@@ -85,6 +89,10 @@
     a {
       margin-right: auto;
       margin-left: auto;
+
+      svg path {
+        fill: $color-accent;
+      }
     }
   }
 }
