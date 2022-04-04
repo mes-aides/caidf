@@ -1,93 +1,104 @@
 <template>
   <div id="homepage">
-    <div class="container">
-      <div class="aj-home-hero">
-        <div class="aj-home-hero-content">
+    <section class="caidf-home-section caidf-first-section">
+      <div class="caidf-home-breadcrumb">
+        <template v-for="(item, index) in breadcrumbs" :key="item.link">
+          <span v-if="index" class="caidf-home-breadcrumb-arrow"
+            ><ArrowRight></ArrowRight
+          ></span>
+
+          <a
+            :href="item.link"
+            class="caidf-home-breadcrumb-link"
+            :class="{
+              active: item.active,
+            }"
+          >
+            {{ item.text }}
+          </a>
+        </template>
+      </div>
+      <div class="caidf-home-container">
+        <div class="caidf-first-section-text">
           <h1>
-            <span class="hightlight"
-              >Évaluez vos droits à<br />plus de 20 aides
-            </span>
-            <br />en moins de 5 minutes.
+            <span class="caidf-has-text-white"
+              >+ de 500 aides et services disponibles pour</span
+            >
+            optimiser votre budget.
           </h1>
-          <div class="aj-home-hero-buttons-wrapper">
-            <button
-              v-if="hasExistingSituation"
-              v-analytics="{
-                action: 'Reprendre ma simulation',
-                category: 'Home',
-              }"
-              :class="`button ${ctaSize} secondary`"
-              @click="next()"
+          <p class="caidf-has-text-white caidf-font-open-sans-semi-bold">
+            Accédez à toutes les aides auxquelles vous pouvez prétendre. Il y en
+            a forcément une pour vous !
+          </p>
+          <div>
+            <a class="caidf-button caidf-accent caidf-has-text-uppercase"
+              >Je me lance</a
             >
-              Reprendre ma simulation
-            </button>
-            <button
-              v-analytics="{ action: ctaLabel, category: 'Home' }"
-              :class="`button ${ctaSize} primary`"
-              @click="newSituation()"
+            <a class="caidf-button caidf-accent-invert caidf-has-text-uppercase"
+              >Je reprends ma simulation</a
             >
-              {{ ctaLabel }}
-            </button>
+          </div>
+          <div>
+            <a class="caidf-button caidf-outline-white caidf-has-text-uppercase"
+              >Je contacte mon conseiller</a
+            >
           </div>
         </div>
-      </div>
-      <div class="aj-home-illustration">
         <img
-          src="@/../public/caidf/img/illustration.svg"
-          alt="Illustration d'une famille"
+          src="/caidf/img/hand-with-phone.png"
+          class="caidf-hand-with-phone-img"
         />
       </div>
-    </div>
+    </section>
+
+    <section class="caidf-home-section caidf-second-section">
+      <div class="caidf-home-container">
+        <h2
+          class="caidf-has-text-white caidf-has-text-center caidf-font-open-sans-semi-bold"
+          >COMMENT ÇA MARCHE</h2
+        >
+        <div class="caidf-chevron-wrapper">
+          <a href="#">
+            <DoubleChevronBottom></DoubleChevronBottom>
+          </a>
+        </div>
+
+        <div class="caidf-columns"> </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import Institution from "@/lib/institution"
-import reduce from "lodash/reduce"
-import size from "lodash/size"
-import filter from "lodash/filter"
-import mapValues from "lodash/mapValues"
+import ArrowRight from "@/context/caidf/icons/arrow-right"
+import DoubleChevronBottom from "@/context/caidf/icons/double-chevron-bottom"
 
 export default {
   name: "Home",
+  components: {
+    ArrowRight,
+    DoubleChevronBottom,
+  },
   data: () => {
-    let value = {}
-    const types = ["prestationsNationales", "partenairesLocaux"]
-    types.forEach(function (type) {
-      let providersWithoutPrivatePrestations = mapValues(
-        Institution[type],
-        function (provider) {
-          provider = { ...provider }
-          provider.prestations = reduce(
-            provider.prestations,
-            function (prestations, prestation, name) {
-              if (!prestation.private) {
-                prestations[name] = prestation
-              }
-
-              return prestations
-            },
-            {}
-          )
-          return provider
-        }
-      )
-
-      value[type] = filter(
-        providersWithoutPrivatePrestations,
-        function (provider) {
-          return size(provider.prestations)
-        }
-      )
-      value[type + "Count"] = Object.keys(value[type]).reduce(function (
-        total,
-        provider
-      ) {
-        return total + size(value[type][provider].prestations)
-      },
-      0)
-    })
-    return value
+    return {
+      breadcrumbs: [
+        {
+          link: "/",
+          text: "Nos conseils",
+          active: false,
+        },
+        {
+          link: "/",
+          text: "Mes coups durs",
+          active: false,
+        },
+        {
+          link: "/",
+          text: "Nos conseils",
+          active: true,
+        },
+      ],
+    }
   },
   computed: {
     hasExistingSituation: function () {
