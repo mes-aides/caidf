@@ -58,3 +58,35 @@ button.button {
     }
   }
 }
+
+@mixin caidf-button-mixin($color-background, $color-font, $color-border) {
+  border: 1px solid $color-border;
+  background-color: $color-background;
+  color: $color-font;
+
+  &:focus,
+  &:hover {
+    background-color: $color-font;
+    color: $color-background;
+  }
+}
+
+.caidf-button {
+  display: inline-block;
+  padding: 12px 24px;
+  min-width: 180px;
+  text-decoration: none;
+  text-align: center;
+
+  &.caidf-accent {
+    @include caidf-button-mixin($color-accent, white, $color-accent);
+  }
+
+  &.caidf-accent-invert {
+    @include caidf-button-mixin(white, $color-accent, white);
+  }
+
+  &.caidf-outline-white {
+    @include caidf-button-mixin($color-first-section-home, white, white);
+  }
+}
