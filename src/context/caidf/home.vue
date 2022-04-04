@@ -47,6 +47,8 @@
         <img
           src="/caidf/img/hand-with-phone.png"
           class="caidf-hand-with-phone-img"
+          alt="Image : &ldquo;Accédez à toutes
+        les aides auxquelles vous pouvez prétendre.&rdquo;"
         />
       </div>
     </section>
@@ -63,7 +65,16 @@
           </a>
         </div>
 
-        <div class="caidf-columns"> </div>
+        <CtaBlock
+          v-for="ctaBlock of ctaBlocks"
+          :key="ctaBlock.title"
+          :position="ctaBlock.position"
+          :title="ctaBlock.title"
+          :text="ctaBlock.text"
+          :cta-label="ctaBlock.ctaLabel"
+          :img-path="ctaBlock.imgPath"
+          :img-alt="ctaBlock.imgAlt"
+        ></CtaBlock>
       </div>
     </section>
   </div>
@@ -72,12 +83,14 @@
 <script>
 import ArrowRight from "@/context/caidf/icons/arrow-right"
 import DoubleChevronBottom from "@/context/caidf/icons/double-chevron-bottom"
+import CtaBlock from "@/context/caidf/components/home/caidf-cta-block"
 
 export default {
   name: "Home",
   components: {
     ArrowRight,
     DoubleChevronBottom,
+    CtaBlock,
   },
   data: () => {
     return {
@@ -96,6 +109,32 @@ export default {
           link: "/",
           text: "Nos conseils",
           active: true,
+        },
+      ],
+      ctaBlocks: [
+        {
+          position: "left",
+          title: "1. Je réalise ma simulation",
+          text: "Répondez à un questionnaire simple et intuitif en 7 minutes chrono !",
+          ctaLabel: "Je fais ma simulation",
+          imgPath: "/caidf/img/ne-ratez-aucune-aide.png",
+          imgAlt: "",
+        },
+        {
+          position: "right",
+          title: "2. Je visualise mes aides d’ un seul coup d’œil",
+          text: "Visualisez toutes les aides à un seul endroit et obtenez celle que vous pourriez prétendre.",
+          ctaLabel: "J'obtiens mes aides",
+          imgPath: "/caidf/img/ne-ratez-aucune-aide-2.png",
+          imgAlt: "",
+        },
+        {
+          position: "left",
+          title: "3. Je reste alerté",
+          text: "Client Crédit Agricole ? Recevez par e-mail les mises à jour des dernières aides auxquelles vous pourriez être éligible.",
+          ctaLabel: "Je découvre",
+          imgPath: "/caidf/img/restez-alerte.png",
+          imgAlt: "",
         },
       ],
     }
