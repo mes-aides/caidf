@@ -9,9 +9,7 @@
         >
         <p class="caidf-has-text-white">{{ text }}</p>
         <div class="caidf-cta-wrapper">
-          <a class="caidf-button caidf-accent caidf-has-text-uppercase">{{
-            ctaLabel
-          }}</a>
+          <NewSimulationButton>{{ ctaLabel }}</NewSimulationButton>
         </div>
       </div>
     </div>
@@ -27,9 +25,11 @@
 
 <script>
 import DashArrowLeft from "@/context/caidf/icons/dash-arrow-left"
+import NewSimulationButton from "@/context/caidf/components/home/new-simulation-button"
+
 export default {
   name: "CTABlock",
-  components: { DashArrowLeft },
+  components: { DashArrowLeft, NewSimulationButton },
   props: {
     position: {
       type: String,
