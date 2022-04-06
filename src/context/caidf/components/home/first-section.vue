@@ -29,7 +29,7 @@
           Accédez à toutes les aides auxquelles vous pouvez prétendre. Il y en a
           forcément une pour vous !
         </p>
-        <div>
+        <div class="caidf-first-section-buttons">
           <NewSimulationButton>Je me lance</NewSimulationButton>
           <a
             v-if="hasExistingSituation"
@@ -39,7 +39,7 @@
           >
           <ConsultantContactButton v-else />
         </div>
-        <div v-if="hasExistingSituation">
+        <div v-if="hasExistingSituation" class="caidf-first-section-buttons">
           <ConsultantContactButton />
         </div>
       </div>
