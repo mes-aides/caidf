@@ -1,5 +1,5 @@
 <template>
-  <div class="caidf-columns" :class="`cta-${position}`">
+  <div class="caidf-columns caidf-cta-block" :class="`cta-${position}`">
     <div class="caidf-is-half caidf-cta-column">
       <div>
         <h3
@@ -16,14 +16,20 @@
       </div>
     </div>
     <div class="caidf-is-half caidf-img-column">
+      <DashArrowLeft
+        v-if="showDashArrow"
+        class="caidf-dash-arrow"
+      ></DashArrowLeft>
       <img :src="imgPath" class="caidf-is-full-width" :alt="imgAlt" />
     </div>
   </div>
 </template>
 
 <script>
+import DashArrowLeft from "@/context/caidf/icons/dash-arrow-left"
 export default {
   name: "CTABlock",
+  components: { DashArrowLeft },
   props: {
     position: {
       type: String,
@@ -49,31 +55,57 @@ export default {
       type: String,
       required: true,
     },
+    showDashArrow: {
+      type: Boolean,
+      required: true,
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.caidf-cta-block {
+  margin-bottom: 120px;
+}
 .caidf-cta-column {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.caidf-img-column {
+  position: relative;
+
+  .caidf-dash-arrow {
+    position: absolute;
+    bottom: -92px;
+  }
 }
 
 .cta-left {
   .caidf-cta-column {
     padding-right: 50px;
   }
+
+  .caidf-dash-arrow {
+    left: -170px;
+  }
 }
 
 .cta-right {
   .caidf-cta-column {
-    padding-left: 50px;
     order: 2;
+    padding-left: 50px;
+    padding-bottom: 30px;
   }
 
   .caidf-img-column {
     order: 1;
+
+    .caidf-dash-arrow {
+      right: -170px;
+      transform: scale(-1, 1);
+    }
   }
 }
 </style>

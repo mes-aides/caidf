@@ -53,20 +53,23 @@
       </div>
     </section>
 
-    <section class="caidf-home-section caidf-second-section">
+    <section
+      id="comment-ca-marche"
+      class="caidf-home-section caidf-second-section"
+    >
       <div class="caidf-home-container">
         <h2
           class="caidf-has-text-white caidf-has-text-center caidf-font-open-sans-semi-bold"
           >COMMENT ÇA MARCHE</h2
         >
         <div class="caidf-chevron-wrapper">
-          <a href="#">
+          <router-link :to="{ path: '/', hash: '#comment-ca-marche' }">
             <DoubleChevronBottom></DoubleChevronBottom>
-          </a>
+          </router-link>
         </div>
 
         <CtaBlock
-          v-for="ctaBlock of ctaBlocks"
+          v-for="(ctaBlock, index) of ctaBlocks"
           :key="ctaBlock.title"
           :position="ctaBlock.position"
           :title="ctaBlock.title"
@@ -74,6 +77,7 @@
           :cta-label="ctaBlock.ctaLabel"
           :img-path="ctaBlock.imgPath"
           :img-alt="ctaBlock.imgAlt"
+          :show-dash-arrow="index + 1 !== ctaBlocks.length"
         ></CtaBlock>
       </div>
     </section>
@@ -164,3 +168,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+html {
+  scroll-behavior: smooth;
+}
+</style>
