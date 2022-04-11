@@ -5,12 +5,15 @@
     <div class="caidf-simulation-content">
       <div class="caidf-simulation-helping-block">
         <div class="caidf-simulation-helping-block-content">
-          <div class="caidf-help-icon"
-            ><img src="/caidf/img/ic_a_propos.svg"
-          /></div>
-          <div>
-            <p class="caidf-simulation-helping-text" v-html="helpingText"></p>
-          </div>
+          <template v-if="showHelpingTextContent">
+            <div class="caidf-help-icon"
+              ><img src="/caidf/img/ic_a_propos.svg"
+            /></div>
+            <div>
+              <p class="caidf-simulation-helping-text" v-html="helpingText"></p>
+            </div>
+          </template>
+
           <img
             :src="helpingContent?.img"
             class="caidf-simulation-helping-img"
@@ -148,6 +151,10 @@ export default {
       return this.$route.name === "recapitulatif"
         ? { name: "recapitulatif" }
         : this.chapters.find((chapter) => chapter.current)
+    },
+    showHelpingTextContent() {
+      const isExcludedPage = ["resultatsLieuxDedies"].includes(this.$route.name)
+      return !isExcludedPage && this.helpingText
     },
     helpingContent() {
       return (
