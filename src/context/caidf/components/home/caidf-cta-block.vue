@@ -1,5 +1,9 @@
 <template>
-  <div class="caidf-columns caidf-cta-block" :class="`cta-${position}`">
+  <div
+    class="caidf-columns caidf-cta-block"
+    :class="`cta-${position}`"
+    :data-aos="`fade-${positionInvert}`"
+  >
     <div class="caidf-is-half caidf-cta-column">
       <div>
         <h3
@@ -62,6 +66,11 @@ export default {
     showDashArrow: {
       type: Boolean,
       required: true,
+    },
+  },
+  computed: {
+    positionInvert() {
+      return this.position === "left" ? "right" : "left"
     },
   },
 }
