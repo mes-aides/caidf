@@ -31,16 +31,13 @@
         </p>
         <div class="caidf-first-section-buttons">
           <NewSimulationButton>Je me lance</NewSimulationButton>
-          <a
-            v-if="hasExistingSituation"
-            class="caidf-button caidf-accent-invert caidf-has-text-uppercase"
-            @click="next"
-            >Je reprends ma simulation</a
-          >
-          <ConsultantContactButton v-else />
+          <ConsultantContactButton />
         </div>
         <div v-if="hasExistingSituation" class="caidf-first-section-buttons">
-          <ConsultantContactButton />
+          <a class="caidf-link-with-icon" @click="next">
+            <Export></Export>
+            <span>Je reprends ma simulation</span>
+          </a>
         </div>
       </div>
       <img
@@ -58,6 +55,7 @@ import ArrowRight from "@/context/caidf/icons/arrow-right"
 import HomeMixin from "@/mixins/caidf/home-mixin"
 import ConsultantContactButton from "@/context/caidf/components/home/consultant-contact-button"
 import NewSimulationButton from "@/context/caidf/components/home/new-simulation-button"
+import Export from "@/context/caidf/icons/export"
 
 export default {
   name: "FirstSection",
@@ -65,6 +63,7 @@ export default {
     NewSimulationButton,
     ArrowRight,
     ConsultantContactButton,
+    Export,
   },
   mixins: [HomeMixin],
   data: () => {

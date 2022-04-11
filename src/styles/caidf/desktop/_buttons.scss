@@ -82,11 +82,17 @@ button.button {
     @include caidf-button-mixin($color-accent, white, $color-accent);
   }
 
-  &.caidf-accent-invert {
-    @include caidf-button-mixin(white, $color-accent, white);
-  }
-
   &.caidf-outline-white {
     @include caidf-button-mixin($color-first-section-home, white, white);
+  }
+}
+
+.caidf-link-with-icon {
+  display: flex;
+  align-items: center;
+
+  svg,
+  img {
+    margin-right: 8px;
   }
 }
