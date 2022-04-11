@@ -121,7 +121,7 @@
 
       .caidf-dash-arrow {
         position: absolute;
-        bottom: -92px;
+        top: calc(-162px - 40px);
       }
     }
 
@@ -131,7 +131,8 @@
       }
 
       .caidf-dash-arrow {
-        left: -170px;
+        left: 40px;
+        transform: scale(-1, 1);
       }
     }
 
@@ -144,11 +145,10 @@
 
       .caidf-img-column {
         order: 1;
+      }
 
-        .caidf-dash-arrow {
-          right: -170px;
-          transform: scale(-1, 1);
-        }
+      .caidf-dash-arrow {
+        right: 40px;
       }
     }
   }
