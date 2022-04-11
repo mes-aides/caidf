@@ -71,18 +71,18 @@ export default {
     return {
       breadcrumbs: [
         {
-          link: "/",
+          link: "https://www.credit-agricole.fr/ca-paris/particulier.html",
           text: "Nos conseils",
           active: false,
         },
         {
-          link: "/",
+          link: "https://www.credit-agricole.fr/ca-paris/particulier/conseils/coups-durs.html",
           text: "Mes coups durs",
           active: false,
         },
         {
           link: "/",
-          text: "Nos conseils",
+          text: "Mes aides",
           active: true,
         },
       ],
