@@ -63,6 +63,12 @@ module.exports = {
         "@/context/caidf/components/warning-message"
       )
     )
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /views\/simulation\/resultats\/lieux.vue$/,
+        "@/context/caidf/views/lieux"
+      )
+    )
   },
   chainWebpack(config) {
     config.module
