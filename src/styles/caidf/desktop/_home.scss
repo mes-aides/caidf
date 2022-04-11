@@ -53,24 +53,36 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      max-width: 700px;
       width: 66%;
     }
 
     h1 {
+      font-size: 38px;
       margin-bottom: 32px;
       font-family: "Open Sans Bold";
+      text-transform: unset;
     }
 
     p {
       margin-bottom: 32px;
     }
 
-    .caidf-button {
+    .caidf-button,
+    .caidf-link-with-icon {
       margin-bottom: 24px;
     }
 
     .caidf-accent {
       margin-right: 24px;
+    }
+
+    .caidf-link-with-icon {
+      color: white;
+
+      svg path {
+        fill: white;
+      }
     }
   }
 
