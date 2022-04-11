@@ -23,7 +23,7 @@
         :cta-label="ctaBlock.ctaLabel"
         :img-path="ctaBlock.imgPath"
         :img-alt="ctaBlock.imgAlt"
-        :show-dash-arrow="index + 1 !== ctaBlocks.length"
+        :show-dash-arrow="index !== 0"
       ></CtaBlock>
     </div>
   </section>
