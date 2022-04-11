@@ -18,7 +18,9 @@ export default {
     FirstSection,
   },
   created() {
-    AOS.init()
+    AOS.init({
+      offset: 200,
+    })
   },
 }
 </script>
