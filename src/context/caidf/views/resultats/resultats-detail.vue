@@ -1,14 +1,8 @@
 <template>
   <ResultatBase>
-    <a
-      class="caidf-back-button"
-      type="button"
-      data-testid="back"
-      @click="goBack($event)"
-    >
-      <ArrowRight></ArrowRight>
+    <SmallBackButton @click="goBack($event)">
       Retour aux résultats
-    </a>
+    </SmallBackButton>
 
     <div class="aj-box normal-padding-bottom aj-results-details">
       <DroitsDetails
@@ -28,12 +22,12 @@ import DroitsDetails from "@/context/caidf/components/droits-details"
 import ResultatsMixin from "@/mixins/resultats"
 import StatisticsMixin from "@/mixins/statistics"
 import ResultatBase from "@/context/caidf/views/resultats/resultat-base"
-import ArrowRight from "@/context/caidf/icons/arrow-right"
+import SmallBackButton from "@/context/caidf/components/small-back-button"
 
 export default {
   name: "SimulationResultatsDetail",
   components: {
-    ArrowRight,
+    SmallBackButton,
     ResultatBase,
     DroitsDetails,
   },
