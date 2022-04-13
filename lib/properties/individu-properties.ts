@@ -12,7 +12,7 @@ const isRelevant = (items: any[], propertyData: PropertyData) => {
   )
 }
 
-export default {
+const STEPS = {
   aah_restriction_substantielle_durable_acces_emploi: new Property({
     question: ({ individu }) => {
       return `${Individu.label(
@@ -687,7 +687,13 @@ export default {
   }),
 }
 
+try {
+  const { addProperties } = require("../context/additional-questions")
+  addProperties(STEPS)
+} catch (e) {
+  console.log(e)
+}
+
 export default {
-  loadEntity,
   STEPS,
 }
