@@ -1,0 +1,23 @@
+label: EKO
+institution: credit_agricole
+description: Dans la vie on ne maîtrise pas toujours tout.
+  Avec EKO, au moins vous maîtrisez votre budget ! Une carte,
+  une appli, une agence pour 2 euros par mois.
+conditions:
+  - Ne pas être à découvert lors de la souscription de l'offre.
+    Vous rencontrez des difficultés financières passagères ? Pour vous accompagner
+    au mieux, profitez de l'offre <a href="/aides/ca-avance-coup-de-main">Avance coup de main</a>, un prêt de minimum
+    1000 € que vous ne commencerez à rembourser que dans 3 mois.
+  - Détenir un compte dans une banque établie dans l’Espace
+    Economique Européen (compte ou livret d’épargne).
+conditions_generales:
+  - type: age
+    operator: ">"
+    value: 30
+profils: []
+link: https://ca-eko-globetrotter.fr/eko#details-offre
+instructions: https://ca-eko-globetrotter.fr/eko#details-offre
+prefix: l’
+type: bool
+periodicite: ponctuelle
+top: 113

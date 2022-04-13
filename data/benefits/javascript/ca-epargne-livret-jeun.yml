@@ -1,0 +1,21 @@
+label: livret Jeune Mozaïc
+institution: credit_agricole
+description:
+  Le Livret Jeune Mozaïc permet de vous constituer une première épargne librement.
+  L’argent placé sur le livret reste disponible et vous rapporte 0,50% d’intérêts par an.
+conditions:
+  - Déposer un montant minimum à l’ouverture de 10 €
+conditions_generales:
+  - type: age
+    operator: ">="
+    value: 12
+  - type: age
+    operator: "<="
+    value: 25
+profils: []
+link: https://www.credit-agricole.fr/ca-paris/particulier/epargne/livret-epargne-logement/livret-jeune-mozaic.html
+instructions: https://www.credit-agricole.fr/ca-paris/particulier/epargne/livret-epargne-logement/livret-jeune-mozaic.html
+prefix: le
+type: bool
+periodicite: ponctuelle
+top: 115

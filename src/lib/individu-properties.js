@@ -641,49 +641,14 @@ const STEPS = {
       ].filter((item) => item.isRelevant)
     },
   },
-  _interestDiagnostifFinancier: {
-    question: "Avez-vous besoin d'un diagnostic financier ?",
-  },
-  _aleas: {
-    question: "Faites-vous face à un aléa de la vie ?",
-    questionType: "multiple",
-    items: [
-      {
-        value: "maladie_invalidite",
-        label: "Maladie / invalidité",
-      },
-      {
-        value: "separation_divorce",
-        label: "Séparation / divorce",
-      },
-      {
-        value: "depart_retraite",
-        label: "Départ à la retraite",
-      },
-      {
-        value: "perte_emploi",
-        label: "Perte d'emploi / chômage",
-      },
-      {
-        value: "autre_alea",
-        label: "Autre aléa",
-      },
-      {
-        value: "aucune_alea",
-        label: "Je ne fais pas face à un aléa de la vie",
-      },
-    ],
-  },
-  _interestEmploi: {
-    question: "Recherchez vous un emploi ?",
-  },
-  _interestLogement: {
-    question: "Recherchez vous un logement ?",
-  },
-  _interestVoiture: {
-    question:
-      "Possédez vous un véhicule ou avez-vous l'intention d'en acheter/louer un ?",
-  },
+}
+
+try {
+  const { addProperties } = require("../context/additional-questions")
+  addProperties(STEPS)
+  console.log(STEPS)
+} catch (e) {
+  console.log(e)
 }
 
 export default {
