@@ -642,4 +642,52 @@ export default {
       ].filter((item) => item.isRelevant)
     },
   }),
+  _interestDiagnostifFinancier: new Property({
+    question: "Avez-vous besoin d'un diagnostic financier ?",
+  }),
+  _aleas: new EnumProperty({
+    question: "Faites-vous face à un aléa de la vie ?",
+    questionType: "multiple",
+    items: [
+      {
+        value: "maladie_invalidite",
+        label: "Maladie / invalidité",
+      },
+      {
+        value: "separation_divorce",
+        label: "Séparation / divorce",
+      },
+      {
+        value: "depart_retraite",
+        label: "Départ à la retraite",
+      },
+      {
+        value: "perte_emploi",
+        label: "Perte d'emploi / chômage",
+      },
+      {
+        value: "autre_alea",
+        label: "Autre aléa",
+      },
+      {
+        value: "aucune_alea",
+        label: "Je ne fais pas face à un aléa de la vie",
+      },
+    ],
+  }),
+  _interestEmploi: new Property({
+    question: "Recherchez vous un emploi ?",
+  }),
+  _interestLogement: new Property({
+    question: "Recherchez vous un logement ?",
+  }),
+  _interestVoiture: new Property({
+    question:
+      "Possédez vous un véhicule ou avez-vous l'intention d'en acheter/louer un ?",
+  }),
+}
+
+export default {
+  loadEntity,
+  STEPS,
 }
