@@ -28,7 +28,11 @@ const router = createRouter({
     {
       path: "/simulation",
       name: "simulation",
-      redirect: "/simulation/individu/demandeur/date_naissance",
+      redirect: (to, component, c) => {
+        if (to.name == "simulation") {
+          return store.getters.getAllSteps[1].path
+        }
+      },
       component: context.Simulation,
       meta: {
         headTitle: `Ma simulation sur le simulateur d'aides ${context.name}`,
@@ -355,7 +359,7 @@ router.beforeEach((to, from, next) => {
     store.dispatch("verifyBenefitVariables")
     if (
       to.matched.some((r) => r.name === "foyer" || r.name === "simulation") &&
-      !to.path.endsWith("/date_naissance") &&
+      to.path != store.getters.getAllSteps[1].path &&
       ["resultats", "resultatsDetails", "resultatsLieuxGeneriques"].indexOf(
         to.name
       ) === -1 &&
