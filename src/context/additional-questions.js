@@ -45,9 +45,9 @@ const newQuestions = {
     question: "Avez-vous besoin d'un diagnostic financier ?",
     step: {
       isActive: (subject) =>
-        (subject.demandeur._aleas.length == 1 &&
-          subject.demandeur._aleas[0] !== "aucun_alea") ||
-        subject.demandeur._aleas.length > 1,
+        (subject.demandeur?._aleas?.length == 1 &&
+          subject.demandeur?._aleas[0] !== "aucun_alea") ||
+        subject.demandeur?._aleas?.length > 1,
       steps: [
         new Step({
           entity: "individu",
