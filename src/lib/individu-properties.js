@@ -646,7 +646,6 @@ const STEPS = {
 try {
   const { addProperties } = require("../context/additional-questions")
   addProperties(STEPS)
-  console.log(STEPS)
 } catch (e) {
   console.log(e)
 }

@@ -28,10 +28,8 @@ const router = createRouter({
     {
       path: "/simulation",
       name: "simulation",
-      redirect: (to, component, c) => {
-        if (to.name == "simulation") {
-          return store.getters.getAllSteps[1].path
-        }
+      redirect: () => {
+        return store.getters.getAllSteps[1].path
       },
       component: context.Simulation,
       meta: {
