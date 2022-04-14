@@ -1,0 +1,19 @@
+label: bon plan Emploi
+institution: credit_agricole
+description: >-
+  Hello Charly accompagne gratuitement des milliers de jeunes dans leur orientation scolaire.
+profils: []
+conditions_generales:
+  - type: age
+    operator: ">="
+    value: 18
+  - type: age
+    operator: "<="
+    value: 30
+interestFlag: _interestEmploi
+link: https://globetrotterplace-ca-paris.fr/bon-plan-metier/
+instructions: https://globetrotterplace-ca-paris.fr/bon-plan-metier/
+prefix: le
+type: bool
+periodicite: ponctuelle
+top: 116
