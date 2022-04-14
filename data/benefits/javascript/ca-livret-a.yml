@@ -1,0 +1,16 @@
+label: livret A
+institution: credit_agricole
+description:
+  Une épargne pour tous, 100% souple et disponible. Constituez-vous sans aucun risque une
+  réserve d’argent facilement disponible pour les imprévus ou les coups de cœur.
+conditions:
+  - Ne pas déjà détenir un livret A dans une autre banque. vous possédez un Livret A ?
+    Pensez au Livret de développement durable et solidaire.
+  - Déposer un montant minimum à l’ouverture de 10 €.
+profils: []
+link: https://www.credit-agricole.fr/ca-paris/particulier/epargne/livret-epargne-logement/livret-a.html
+instructions: https://www.credit-agricole.fr/ca-paris/particulier/epargne/livret-epargne-logement/livret-a.html
+prefix: un
+type: bool
+periodicite: ponctuelle
+top: 115
