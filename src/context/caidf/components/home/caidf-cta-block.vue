@@ -5,7 +5,7 @@
     :data-aos="`fade-${positionInvert}`"
   >
     <div class="caidf-is-half caidf-cta-column">
-      <div>
+      <div class="caidf-max-width-text">
         <h3
           class="caidf-has-text-white caidf-font-open-sans-bold"
           style="margin-top: 20px"
