@@ -59,7 +59,12 @@ button.button {
   }
 }
 
-@mixin caidf-button-mixin($color-background, $color-font, $color-border) {
+@mixin caidf-button-mixin(
+  $color-background,
+  $color-font,
+  $color-border,
+  $color-border-hover
+) {
   border: 1px solid $color-border;
   background-color: $color-background;
   color: $color-font;
@@ -68,6 +73,7 @@ button.button {
   &:hover {
     background-color: $color-font;
     color: $color-background;
+    border-color: $color-border-hover;
   }
 }
 
@@ -80,11 +86,11 @@ button.button {
   border-radius: 4px;
 
   &.caidf-accent {
-    @include caidf-button-mixin($color-accent, white, $color-accent);
+    @include caidf-button-mixin($color-accent, white, $color-accent, white);
   }
 
   &.caidf-outline-white {
-    @include caidf-button-mixin($color-first-section-home, white, white);
+    @include caidf-button-mixin($color-first-section-home, white, white, white);
   }
 }
 
