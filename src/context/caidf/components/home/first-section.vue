@@ -18,7 +18,7 @@
       </template>
     </div>
     <div class="caidf-home-container">
-      <div class="caidf-first-section-text">
+      <div class="caidf-first-section-text caidf-max-width-text">
         <h1>
           <span class="caidf-has-text-white"
             >+ de 500 aides et services disponibles pour</span
