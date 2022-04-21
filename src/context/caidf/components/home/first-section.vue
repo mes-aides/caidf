@@ -71,7 +71,7 @@ export default {
       breadcrumbs: [
         {
           link: "https://www.credit-agricole.fr/ca-paris/particulier.html",
-          text: "Nos conseils",
+          text: "Accueil",
           active: false,
         },
         {
