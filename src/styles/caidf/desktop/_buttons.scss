@@ -77,6 +77,7 @@ button.button {
   min-width: 200px;
   text-decoration: none;
   text-align: center;
+  border-radius: 4px;
 
   &.caidf-accent {
     @include caidf-button-mixin($color-accent, white, $color-accent);
