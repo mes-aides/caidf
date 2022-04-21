@@ -117,10 +117,11 @@
       justify-content: center;
 
       p {
-        opacity: 0.9;
+        color: rgba(255, 255, 255, 0.8);
       }
     }
     .caidf-img-column {
+      z-index: 0;
       position: relative;
 
       .caidf-dash-arrow {

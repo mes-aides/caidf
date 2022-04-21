@@ -10,7 +10,7 @@
           style="margin-top: 20px"
           >{{ title }}</h3
         >
-        <p class="caidf-has-text-white">{{ text }}</p>
+        <p>{{ text }}</p>
         <div class="caidf-cta-wrapper">
           <NewSimulationButton>{{ ctaLabel }}</NewSimulationButton>
         </div>
