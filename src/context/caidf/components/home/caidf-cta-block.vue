@@ -1,13 +1,12 @@
 <template>
-  <div
-    class="caidf-columns caidf-cta-block"
-    :class="`cta-${position}`"
-    :data-aos="`fade-${positionInvert}`"
-  >
-    <div class="caidf-is-half caidf-cta-column">
+  <div class="caidf-columns caidf-cta-block" :class="`cta-${position}`">
+    <div
+      class="caidf-is-half caidf-cta-column"
+      :data-aos="`fade-${positionInvert}`"
+    >
       <div class="caidf-max-width-text">
         <h3
-          class="caidf-has-text-white caidf-font-open-sans-bold"
+          class="caidf-has-text-white caidf-font-open-sans-bold caidf-text-transformation-none"
           style="margin-top: 20px"
           >{{ title }}</h3
         >
