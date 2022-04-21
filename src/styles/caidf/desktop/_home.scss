@@ -57,13 +57,14 @@
     }
 
     h1 {
-      font-size: 38px;
+      font-size: 44px;
       margin-bottom: 32px;
       font-family: "Open Sans Bold";
       text-transform: unset;
     }
 
     p {
+      font-size: 20px;
       margin-bottom: 32px;
     }
 
@@ -114,6 +115,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      p {
+        opacity: 0.9;
+      }
     }
     .caidf-img-column {
       position: relative;
