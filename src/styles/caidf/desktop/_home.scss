@@ -42,6 +42,11 @@
       }
     }
 
+    .caidf-home-container {
+      min-height: 100%;
+      display: flex;
+    }
+
     .caidf-hand-with-phone-img {
       position: absolute;
       bottom: -32px;
@@ -50,9 +55,9 @@
     }
 
     .caidf-first-section-text {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      margin-top: auto;
+      margin-bottom: auto;
+      padding: 32px 0;
       width: 66%;
     }
 
