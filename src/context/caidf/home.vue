@@ -19,7 +19,7 @@ export default {
   },
   created() {
     AOS.init({
-      offset: 400,
+      offset: 300,
     })
   },
 }
