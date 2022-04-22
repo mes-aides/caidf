@@ -10,7 +10,9 @@
       >
       <div class="caidf-chevron-wrapper">
         <router-link :to="{ path: '/', hash: '#comment-ca-marche' }">
-          <DoubleChevronBottom></DoubleChevronBottom>
+          <span>
+            <DoubleChevronBottom></DoubleChevronBottom>
+          </span>
         </router-link>
       </div>
 

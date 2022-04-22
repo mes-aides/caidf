@@ -1,3 +1,6 @@
+html {
+  overflow-x: hidden;
+}
 #homepage {
   .caidf-home-section {
     padding: 32px 67px;
@@ -94,13 +97,32 @@
   .caidf-second-section {
     background-color: $color-primaire;
 
+    @keyframes slide-bottom {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
     .caidf-chevron-wrapper {
       display: flex;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
 
       a {
         margin-right: auto;
         margin-left: auto;
+        padding: 0 10px 20px 10px;
+
+        span {
+          animation-name: slide-bottom;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+        }
 
         svg path {
           fill: $color-accent;
