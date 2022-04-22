@@ -21,7 +21,7 @@
       <div class="caidf-first-section-text caidf-max-width-text">
         <h1>
           <span class="caidf-has-text-white"
-            >+ de 500 aides et services disponibles pour</span
+            >+ de {{ benefitsCount }} aides et services disponibles pour</span
           >
           optimiser votre budget.
         </h1>
@@ -86,6 +86,11 @@ export default {
         },
       ],
     }
+  },
+  computed: {
+    benefitsCount() {
+      return 100 * Math.floor(process.env.VUE_APP_BENEFIT_COUNT / 100)
+    },
   },
 }
 </script>
