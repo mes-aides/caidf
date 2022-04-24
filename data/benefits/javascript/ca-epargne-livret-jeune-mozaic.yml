@@ -12,7 +12,6 @@ conditions_generales:
   - type: age
     operator: "<="
     value: 25
-profils: []
 link: https://www.credit-agricole.fr/ca-paris/particulier/epargne/livret-epargne-logement/livret-jeune-mozaic.html
 instructions: https://www.credit-agricole.fr/ca-paris/particulier/epargne/livret-epargne-logement/livret-jeune-mozaic.html
 prefix: le

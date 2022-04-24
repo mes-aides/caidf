@@ -9,7 +9,6 @@ conditions_generales:
   - type: age
     operator: "<="
     value: 30
-profils: []
 link: https://ca-eko-globetrotter.fr/globetrotter
 instructions: https://ca-eko-globetrotter.fr/globetrotter
 prefix: l’
