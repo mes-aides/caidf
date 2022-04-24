@@ -4,8 +4,7 @@ description:
   Le dispositif d’accompagnement humain, social et financier du Crédit Agricole
   qui aide gratuitement les personnes fragilisées suite à un aléa de
   la vie (séparation, perte d’emploi, maladie...).
-interestFlag: _interestDiagnostifFinancier
-profils: []
+interestFlag: _interetDiagnostifFinancier
 link: https://www.credit-agricole.fr/ca-paris/particulier/conseils/coups-durs/point-passerelle.html
 instructions: https://www.credit-agricole.fr/ca-paris/particulier/conseils/coups-durs/point-passerelle.html
 prefix: l’

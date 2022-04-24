@@ -1,14 +1,14 @@
 const { Step } = require("../../lib/state/steps")
 
 const newQuestions = {
-  _interestVoiture: {
+  _interetVoiture: {
     question:
       "Possédez vous un véhicule ou avez-vous l'intention d'en acheter/louer un ?",
   },
-  _interestLogement: {
+  _interetLogement: {
     question: "Recherchez vous un logement ?",
   },
-  _interestEmploi: {
+  _interetEmploi: {
     question: "Recherchez vous un emploi ?",
   },
   _aleas: {
@@ -41,7 +41,7 @@ const newQuestions = {
       },
     ],
   },
-  _interestDiagnostifFinancier: {
+  _interetDiagnostifFinancier: {
     question: "Avez-vous besoin d'un diagnostic financier ?",
     step: {
       isActive: (subject) =>
@@ -52,7 +52,7 @@ const newQuestions = {
         new Step({
           entity: "individu",
           id: "demandeur",
-          variable: "_interestDiagnostifFinancier",
+          variable: "_interetDiagnostifFinancier",
         }),
       ],
     },

@@ -162,6 +162,11 @@ const individuBase = {
     type: String,
     enum: ["achat_revente", "bic", "bnc"],
   },
+  _interetVoiture: Boolean,
+  _interetLogement: Boolean,
+  _interetEmploi: Boolean,
+  _aleas: String,
+  _interetDiagnostifFinancier: Boolean,
 }
 
 const individu = Object.assign(individuBase, allRessources)
