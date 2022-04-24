@@ -3,7 +3,6 @@ institution: credit_agricole
 description: >-
   Ce pack permis, en partenariat avec en voiture Simone
   (code de la route et 20h de conduite) est proposé à tous nos clients de 18 à 30 ans.
-profils: []
 conditions_generales:
   - type: age
     operator: ">="

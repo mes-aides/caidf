@@ -11,7 +11,6 @@ conditions_generales:
   - type: age
     operator: <=
     value: 30
-profils: []
 link: https://www.credit-agricole.fr/ca-paris/particulier/credit/consommation/avance-jeunes-actifs.html
 instructions: https://www.credit-agricole.fr/ca-paris/particulier/credit/consommation/avance-jeunes-actifs.html
 prefix: l’
