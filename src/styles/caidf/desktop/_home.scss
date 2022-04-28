@@ -184,4 +184,25 @@ html {
       }
     }
   }
+
+  .caidf-third-section {
+    background-color: white;
+    padding-top: 64px;
+    padding-bottom: 72px;
+
+    .caidf-home-container {
+      display: flex;
+      justify-content: center;
+    }
+    h2 {
+      font-family: "Open Sans" !important;
+      color: $color-70-text-major;
+    }
+
+    .caidf-third-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 52px;
+    }
+  }
 }
