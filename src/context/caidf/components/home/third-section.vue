@@ -7,7 +7,12 @@
           accompagner</h2
         >
         <div class="caidf-third-buttons">
-          <a class="button primary">JE PRENDS RENDEZ-VOUS</a>
+          <a
+            class="button primary"
+            href="https://www.credit-agricole.fr/ca-paris/particulier/campagnes/prendre-rendez-vous-avec-mon-conseiller.html"
+            target="_blank"
+            >JE PRENDS RENDEZ-VOUS</a
+          >
         </div>
       </div>
     </div>
