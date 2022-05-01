@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     label: function () {
-      return typeLabels[this.type]
+      return (this.type !== "link" && this.benefit.cta) || typeLabels[this.type]
     },
     longLabel: function () {
       return `${longLabels[this.type]} pour ${this.benefit.prefix}${
