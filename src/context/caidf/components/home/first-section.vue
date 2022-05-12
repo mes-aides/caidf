@@ -1,22 +1,5 @@
 <template>
   <section class="caidf-home-section caidf-first-section">
-    <div class="caidf-home-breadcrumb">
-      <template v-for="(item, index) in breadcrumbs" :key="item.link">
-        <span v-if="index" class="caidf-home-breadcrumb-arrow"
-          ><ArrowRight></ArrowRight
-        ></span>
-
-        <a
-          :href="item.link"
-          class="caidf-home-breadcrumb-link"
-          :class="{
-            active: item.active,
-          }"
-        >
-          {{ item.text }}
-        </a>
-      </template>
-    </div>
     <div class="caidf-home-container">
       <div class="caidf-first-section-text caidf-max-width-text">
         <h1>
@@ -51,7 +34,6 @@
 </template>
 
 <script>
-import ArrowRight from "@/context/caidf/icons/arrow-right"
 import HomeMixin from "@/mixins/caidf/home-mixin"
 import ConsultantContactButton from "@/context/caidf/components/home/consultant-contact-button"
 import NewSimulationButton from "@/context/caidf/components/home/new-simulation-button"
@@ -61,32 +43,10 @@ export default {
   name: "FirstSection",
   components: {
     NewSimulationButton,
-    ArrowRight,
     ConsultantContactButton,
     Export,
   },
   mixins: [HomeMixin],
-  data: () => {
-    return {
-      breadcrumbs: [
-        {
-          link: "https://www.credit-agricole.fr/ca-paris/particulier.html",
-          text: "Accueil",
-          active: false,
-        },
-        {
-          link: "https://www.credit-agricole.fr/ca-paris/particulier/conseils/coups-durs.html",
-          text: "Mes coups durs",
-          active: false,
-        },
-        {
-          link: "/",
-          text: "Mes aides",
-          active: true,
-        },
-      ],
-    }
-  },
   computed: {
     benefitsCount() {
       return 100 * Math.floor(process.env.VUE_APP_BENEFIT_COUNT / 100)
