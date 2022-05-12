@@ -431,7 +431,7 @@ router.afterEach((to) => {
 })
 
 router.afterEach((to) => {
-  console.log('LOG CAIDF', window?.tC?.event?, window, this)
+  console.log("LOG CAIDF", window?.tC?.event, window, this)
   window?.tC?.event?.actionUtilisateur(window, {
     evt_action_libelle: "mesaides_" + to.fullPath,
   })
