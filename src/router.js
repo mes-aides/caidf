@@ -427,4 +427,10 @@ router.afterEach((to) => {
   })
 })
 
+router.afterEach((to) => {
+  window?.tC?.event?.actionUtilisateur(window, {
+    evt_action_libelle: "mesaides_" + to.fullPath,
+  })
+})
+
 export default router
