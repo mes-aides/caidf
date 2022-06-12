@@ -32,6 +32,23 @@ const fill__dureeMoisEtudesEtranger = (duration) => {
   fillNumber("_dureeMoisEtudesEtranger", duration)
 }
 
+const fill__interetVoiture = (value) => {
+  fillRadio("_interetVoiture", value)
+}
+
+const fill__interetLogement = (value) => {
+  fillRadio("_interetLogement", value)
+}
+
+const fill__interetEmploi = (value) => {
+  fillRadio("_interetEmploi", value)
+}
+
+const fill__aleas = (expect) => {
+  fillCheckboxes("_aleas", expect)
+}
+
+
 export default {
   fill__interetAidesSanitaireSocial,
   fill__interetsAidesVelo,
@@ -41,4 +58,8 @@ export default {
   fill_boursier,
   fill__interetEtudesEtranger,
   fill__dureeMoisEtudesEtranger,
+  fill__interetVoiture,
+  fill__interetLogement,
+  fill__interetEmploi,
+  fill__aleas,
 }

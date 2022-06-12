@@ -13,7 +13,7 @@
           forcément une pour vous !
         </p>
         <div class="caidf-first-section-buttons">
-          <NewSimulationButton>Je me lance</NewSimulationButton>
+          <NewSimulationButton data-testid="new-simulation">Je me lance</NewSimulationButton>
           <ConsultantContactButton />
         </div>
         <div v-if="hasExistingSituation" class="caidf-first-section-buttons">

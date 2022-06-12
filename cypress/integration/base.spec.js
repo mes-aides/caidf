@@ -35,6 +35,10 @@ context("Full simulation", () => {
     projet.fill__interetBafa(false)
     projet.fill__interetPermisDeConduire(false)
     projet.fill__interetAidesSanitaireSocial(false)
+    projet.fill__interetVoiture(false)
+    projet.fill__interetLogement(false)
+    projet.fill__interetEmploi(false)
+    projet.fill__aleas([])
 
     results.wait()
 

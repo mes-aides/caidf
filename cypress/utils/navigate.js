@@ -9,8 +9,6 @@ const goHome = () => {
     .invoke("attr", "content")
     .should("match", /\d+ aides/i)
 
-  cy.get(".aj-home-hero-content").invoke("text").should("contain", "aides")
-
   cy.get('[data-testid="new-simulation"]').click()
 }
 
