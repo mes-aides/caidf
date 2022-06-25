@@ -669,11 +669,12 @@ const props = {
 }
 
 try {
-  const { default: {addProperties} } = require("../additional-questions")
+  const {
+    default: { addProperties },
+  } = require("../additional-questions")
   addProperties(props)
 } catch (e) {
   console.log(e)
 }
-
 
 export default props

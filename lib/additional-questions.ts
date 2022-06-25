@@ -1,7 +1,7 @@
 import { EnumProperty, Property } from "./properties/property"
 import { Step } from "./state/steps"
 
-const newQuestions = {
+const newQuestions: any = {
   _interetVoiture: new Property({
     question:
       "Possédez vous un véhicule ou avez-vous l'intention d'en acheter/louer un ?",
@@ -53,6 +53,8 @@ const newQuestions = {
         subject.demandeur?._aleas?.length > 1,
       steps: [
         new Step({
+          key: undefined,
+          chapter: undefined,
           entity: "individu",
           id: "demandeur",
           variable: "_interetDiagnostifFinancier",
@@ -68,6 +70,8 @@ export default {
       b.push(
         newQuestions[questionId].step ||
           new Step({
+            key: undefined,
+            chapter: undefined,
             entity: "individu",
             id: "demandeur",
             variable: questionId,
@@ -76,7 +80,7 @@ export default {
     })
   },
   addProperties: (props: any) => {
-    Object.keys(newQuestions).forEach((questionId: any) => {
+    Object.keys(newQuestions).forEach((questionId: string) => {
       props[questionId] = newQuestions[questionId].p || newQuestions[questionId]
     })
   },
