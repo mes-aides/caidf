@@ -3,14 +3,18 @@ institution: credit_agricole
 description:
   Nous pensons qu’être à découvert n’est pas une fatalité. Pour vous accompagner au mieux lors
   d'une difficulté financière passagère profitez d’un prêt que vous ne commencerez à rembourser que dans 3 mois.
+  <br/><br/>
+  Avec l'Avance Jeunes Actifs vous bénéficiez d'une avance sous forme de prêt personnel de 1000e remboursable sur 12 mois. 
+  <br/><br/>
+  <div class="mention-credit">Un crédit vous engage et doit être remboursé.
+  Vérifiez vos capacités de remboursement avant de vous engager.</div>
 conditions_generales:
   - type: age
     operator: ">"
     value: 30
-link: https://www.credit-agricole.fr/ca-paris/particulier/campagnes/pret-avance-coup-de-main.html
 instructions: https://www.credit-agricole.fr/ca-paris/particulier/campagnes/pret-avance-coup-de-main.html
 prefix: l’
 type: bool
 periodicite: ponctuelle
 top: 112
-cta: Faire une simulation
+cta: Je réalise une simulation

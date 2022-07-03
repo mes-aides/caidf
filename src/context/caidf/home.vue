@@ -1,8 +1,9 @@
 <template>
   <div id="homepage">
-    <FirstSection></FirstSection>
-    <SecondSection></SecondSection>
-    <ThirdSection></ThirdSection>
+    <FirstSection/>
+    <SecondSection/>
+    <ThirdSection/>
+    <MentionsLegales/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import FirstSection from "@/context/caidf/components/home/first-section"
 import SecondSection from "@/context/caidf/components/home/second-section"
 import ThirdSection from "@/context/caidf/components/home/third-section"
+import MentionsLegales from "@/context/caidf/components/home/mentions-legales"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
@@ -19,6 +21,7 @@ export default {
     SecondSection,
     FirstSection,
     ThirdSection,
+    MentionsLegales,
   },
   created() {
     AOS.init({

@@ -18,7 +18,6 @@ conditions_generales:
     operator: "<="
     value: 30
 interestFlag: _interetLogement
-link: https://location.monespaceimmo.ca-paris.fr/
 instructions: https://globetrotterplace-ca-paris.fr/bon-plan-location/
 prefix: le
 type: bool
