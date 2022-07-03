@@ -6,7 +6,7 @@
           <span class="caidf-has-text-white"
             >+ de {{ benefitsCount }} aides et services disponibles pour</span
           >
-          optimiser votre budget.
+          équilibrer et maîtriser votre budget.
         </h1>
         <p class="caidf-has-text-white caidf-font-open-sans-semi-bold">
           Accédez à toutes les aides auxquelles vous pouvez prétendre. Il y en a

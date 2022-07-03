@@ -12,7 +12,6 @@ conditions_generales:
   - type: benefit
     name: livret_epargne_populaire_taux
     invert: true
-link: https://www.credit-agricole.fr/ca-paris/particulier/epargne/livret-epargne-logement/livret-a.html
 instructions: https://www.credit-agricole.fr/ca-paris/particulier/epargne/livret-epargne-logement/livret-a.html
 prefix: un
 type: bool

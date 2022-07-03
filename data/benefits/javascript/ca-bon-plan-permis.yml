@@ -11,7 +11,6 @@ conditions_generales:
     operator: "<="
     value: 30
 interestFlag: _interetPermisDeConduire
-link: https://globetrotterplace-ca-paris.fr/bon-plan-permis/
 instructions: https://globetrotterplace-ca-paris.fr/bon-plan-permis/
 prefix: le
 type: float

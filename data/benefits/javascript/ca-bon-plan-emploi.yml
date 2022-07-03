@@ -14,7 +14,6 @@ conditions_generales:
     operator: "<="
     value: 30
 interestFlag: _interetEmploi
-link: https://globetrotterplace-ca-paris.fr/bon-plan-metier/
 instructions: https://globetrotterplace-ca-paris.fr/bon-plan-metier/
 prefix: le
 type: bool

@@ -14,7 +14,6 @@ conditions_generales:
   - type: age
     operator: ">"
     value: 30
-link: https://ca-eko-globetrotter.fr/eko#details-offre
 instructions: https://ca-eko-globetrotter.fr/eko#details-offre
 prefix: l’
 type: bool

@@ -71,7 +71,7 @@ export default {
   data() {
     const helpingContentPerChapter = {
       profil: {
-        text: `Ces informations sont nécessaires au traitement de votre demande. Vos données personnelles ne seront pas communiquées à d'autres organismes à des fins commerciales.`,
+        text: `Ces informations sont nécessaires au traitement de votre demande. Vos données ne seront pas conservées à l’issue de la simulation.`,
         img: require("/public/caidf/img/girl-siting-on-table.png"),
       },
       foyer: {
