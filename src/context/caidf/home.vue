@@ -1,9 +1,9 @@
 <template>
   <div id="homepage">
-    <FirstSection/>
-    <SecondSection/>
-    <ThirdSection/>
-    <MentionsLegales/>
+    <FirstSection />
+    <SecondSection />
+    <ThirdSection />
+    <MentionsLegales />
   </div>
 </template>
 

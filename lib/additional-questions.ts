@@ -39,8 +39,7 @@ const newQuestions: any = {
       question: "Avez-vous besoin d'un diagnostic financier ?",
     }),
     step: {
-      isActive: (subject: any) =>
-        subject.demandeur?._aleas?.length >= 1,
+      isActive: (subject: any) => subject.demandeur?._aleas?.length >= 1,
       steps: [
         new Step({
           key: undefined,
