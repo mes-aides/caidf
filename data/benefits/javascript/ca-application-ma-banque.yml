@@ -4,8 +4,7 @@ description: >
   Gardez la maîtrise de vos comptes avec l'application Ma Banque. Directement depuis votre smartphone,
   consultez tous vos comptes en un clin d’œil et gérez votre budget facilement :
   crédits, épargne, catégorisation des opérations, édition de RIB…
-link: https://www.credit-agricole.fr/particulier/applications/ma-banque.html
-instructions: https://www.credit-agricole.fr/particulier/applications/ma-banque.html
+instructions: https://www.credit-agricole.fr/ca-paris/particulier/applications/ma-banque.html
 prefix: l’
 type: bool
 periodicite: ponctuelle

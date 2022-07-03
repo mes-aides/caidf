@@ -32,14 +32,6 @@ const newQuestions: any = {
         value: "perte_emploi",
         label: "Perte d'emploi / chômage",
       },
-      {
-        value: "autre_alea",
-        label: "Autre aléa",
-      },
-      {
-        value: "aucun_alea",
-        label: "Je ne fais pas face à un aléa de la vie",
-      },
     ],
   }),
   _interetDiagnostifFinancier: {
@@ -47,10 +39,7 @@ const newQuestions: any = {
       question: "Avez-vous besoin d'un diagnostic financier ?",
     }),
     step: {
-      isActive: (subject: any) =>
-        (subject.demandeur?._aleas?.length == 1 &&
-          subject.demandeur?._aleas[0] !== "aucun_alea") ||
-        subject.demandeur?._aleas?.length > 1,
+      isActive: (subject: any) => subject.demandeur?._aleas?.length >= 1,
       steps: [
         new Step({
           key: undefined,

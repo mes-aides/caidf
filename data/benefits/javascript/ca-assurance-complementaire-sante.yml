@@ -1,4 +1,4 @@
-label: assurance complémentaire santé
+label: assurance complémentaire Santé
 institution: credit_agricole
 description: >-
   La complémentaire Santé complète les remboursements des frais de santé pris en charge par
@@ -8,7 +8,6 @@ conditions_generales:
   - type: benefit
     name: css_participation_forfaitaire
     invert: true
-link: https://www.credit-agricole.fr/ca-paris/particulier/assurances/prevoyance/assurance-complementaire-sante.html
 teleservice: https://www.credit-agricole.fr/ca-paris/particulier/simulation-devis/assurance/devis-sante.html
 prefix: l’
 type: bool

@@ -1,8 +1,6 @@
 label: assurance Eko auto et/ou 2 roues
 institution: credit_agricole
 description: >-
-  Faites des économies sur votre assurance automobile ou 2 roues.
-  <br/><br/>
   En fonction de votre véhicule, de vos besoins et de votre budget vous pouvez
   compléter votre couverture et réaliser des économies sur votre assurance automobile ou 2 roues,
   grâce à EKO assurance comprenant les services essentiels à un prix attractif.
@@ -12,7 +10,6 @@ description: >-
   ou <a target="_blank" rel="noopener"
   href="https://www.credit-agricole.fr/ca-paris/particulier/assurances/auto-2-roues/assurance-2-roues.html">2 roues</a> suivant votre besoin.
 interestFlag: _interetVoiture
-link: https://www.credit-agricole.fr/ca-paris/particulier/assurances/auto-2-roues.html
 instructions: https://www.credit-agricole.fr/ca-paris/particulier/assurances/auto-2-roues.html
 prefix: l’
 type: bool

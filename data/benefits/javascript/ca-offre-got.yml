@@ -1,4 +1,4 @@
-label: GOT
+label: Globe Trotter
 institution: credit_agricole
 description: Globe trotter, une offre pour les jeunes de 18 à 30 ans inclus.
   1 carte, 0 frais à l'étranger et tous les service d'une grande banque pour 2 euros par mois.
@@ -9,7 +9,6 @@ conditions_generales:
   - type: age
     operator: "<="
     value: 30
-link: https://ca-eko-globetrotter.fr/globetrotter
 instructions: https://ca-eko-globetrotter.fr/globetrotter
 prefix: l’
 type: bool
