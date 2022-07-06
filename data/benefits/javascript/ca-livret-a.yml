@@ -6,7 +6,8 @@ description:
 conditions:
   - Ne pas déjà détenir un livret A dans une autre banque. vous possédez un Livret A ?
     Pensez au <a target="_blank" rel="noopener"
-    href="TODO">Livret de développement durable et solidaire</a>.
+    href="https://www.credit-agricole.fr/ca-paris/particulier/epargne/livret-epargne-logement/livret-de-developpement-durable-ldd.html">
+    Livret de développement durable et solidaire</a>.
   - Déposer un montant minimum à l’ouverture de 10 €.
 conditions_generales:
   - type: benefit

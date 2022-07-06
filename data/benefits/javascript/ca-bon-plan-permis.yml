@@ -3,6 +3,12 @@ institution: credit_agricole
 description: >-
   Ce pack permis, en partenariat avec en voiture Simone
   (code de la route et 20h de conduite) est proposé à tous nos clients de 18 à 30 ans.
+  <br/><br/>
+  De plus, profitez du Prêt permis à 1euro par jour, vous ne remboursez que ce que vous empruntez,
+  au rythme de 30euros par mois (la durée varie selon le montant emprunté).
+  Et ce, même si vous êtes en conduite accompagnée. Il s'agit d'un prêt à taux zéro dont les
+  intérêts sont pris en charge par l'état. <a
+  target="_blank" rel="noopener" href="https://www.credit-agricole.fr/ca-paris/particulier/credit/consommation/pret-permis.html">Découvrir le Prêt permis à 1euro par jour.</a>
 conditions_generales:
   - type: age
     operator: ">="
@@ -14,7 +20,7 @@ interestFlag: _interetPermisDeConduire
 instructions: https://globetrotterplace-ca-paris.fr/bon-plan-permis/
 prefix: le
 type: float
-montant: 699
+montant: 639
 unit: €
 legend: à la place de 1518€
 periodicite: ponctuelle
