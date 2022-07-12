@@ -3,40 +3,8 @@
     <ProgressBar></ProgressBar>
     <Breadcrumb />
     <div>
-      <div class="caidf-resultats-title">
-        <div class="caidf-resultats-title-content">
-          <h1>Résultat de votre simulation</h1>
-          <template v-if="shouldDisplayResults">
-            <div>
-              <div
-                >D’après la situation que vous avez déclaré, vous êtes à priori
-                éligible à :
-              </div>
-              <div class="caidf-benefits-count"
-                ><span>{{ droits.length }} aides</span>
-                pour optimiser votre budget
-              </div>
-              <p class="caidf-font-body-small"
-                >Ces résultats sont fondés sur les seules informations que vous
-                avez indiquées et ne constituent en aucune façon un engagement
-                de la part des organismes cités.</p
-              >
-            </div>
-          </template>
-          <div class="caidf-resultats-button">
-            <router-link
-              class="button light-primary-button"
-              :to="{ name: 'recapitulatif' }"
-            >
-              <img
-                src="/caidf/img/ic_document.svg"
-                alt="Bouton récapitulatif"
-              />
-              <span>Je modifie ma simulation</span>
-            </router-link>
-          </div>
-        </div>
-      </div>
+      <slot name="header"></slot>
+
       <div class="caidf-resultats-container">
         <div class="container aj-layout-container">
           <div class="aj-main-container">

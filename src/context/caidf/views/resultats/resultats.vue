@@ -1,5 +1,41 @@
 <template>
   <ResultatBase>
+    <template v-slot:header>
+      <div class="caidf-resultats-title">
+        <div class="caidf-resultats-title-content">
+          <h1>Résultat de votre simulation</h1>
+          <template v-if="shouldDisplayResults">
+            <div>
+              <div
+                >D’après la situation que vous avez déclaré, vous êtes à priori
+                éligible à :
+              </div>
+              <div class="caidf-benefits-count"
+                ><span>{{ droits.length }} aides</span>
+                pour optimiser votre budget
+              </div>
+              <p class="caidf-font-body-small"
+                >Ces résultats sont fondés sur les seules informations que vous
+                avez indiquées et ne constituent en aucune façon un engagement
+                de la part des organismes cités.</p
+              >
+            </div>
+            <div class="caidf-resultats-button">
+              <router-link
+                class="button light-primary-button"
+                :to="{ name: 'recapitulatif' }"
+              >
+                <img
+                  src="/caidf/img/ic_document.svg"
+                  alt="Bouton récapitulatif"
+                />
+                <span>Je modifie ma simulation</span>
+              </router-link>
+            </div>
+          </template>
+        </div>
+      </div>
+    </template>
     <div v-if="hasWarning" class="notification warning">
       <div>
         <h2>

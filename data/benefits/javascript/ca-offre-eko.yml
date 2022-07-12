@@ -1,13 +1,13 @@
 label: EKO
 institution: credit_agricole
-description: Dans la vie on ne maîtrise pas toujours tout.
-  Avec EKO, au moins vous maîtrisez votre budget ! Une carte,
+description: >
+  Dans la vie on ne maîtrise pas toujours tout.
+  Avec EKO, au moins vous maîtrisez votre budget ! Une carte,
   une appli, une agence pour 2 euros par mois.
 conditions:
   - Ne pas être à découvert lors de la souscription de l'offre.
-    Vous rencontrez des difficultés financières passagères ? Pour vous accompagner
-    au mieux, profitez de l'offre <a target="_blank" rel="noopener" href="https://www.credit-agricole.fr/ca-paris/particulier/campagnes/pret-avance-coup-de-main.html">Avance coup de main</a>, un prêt de minimum
-    1 000 € que vous ne commencerez à rembourser que dans 3 mois.
+    Votre solde est négatif ? Contactez votre conseiller pour
+    répondre à vos questions et vous accompagner.
   - Détenir un compte dans une banque établie dans l’Espace
     Economique Européen (compte ou livret d’épargne).
 conditions_generales:

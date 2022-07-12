@@ -115,7 +115,7 @@ export default {
     },
     getBenefitCTA: function (droit) {
       if (droit.institution.slug == "credit_agricole") {
-        return "En savoir plus"
+        return droit.list_cta || "Découvrir cette offre"
       }
       return "Demander cette aide"
     },
