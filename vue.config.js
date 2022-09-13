@@ -6,6 +6,7 @@ import config from "./dist-server/backend/config/index.js"
 import configureAPI from "./dist-server/configure.js"
 import mock from "./dist-server/mock.js"
 import benefits from "./dist-server/data/all.js"
+import webpack from "webpack"
 
 const { baseURL, github, matomo, netlifyContributionURL, statistics } = config
 const __dirname = new URL(".", import.meta.url).pathname

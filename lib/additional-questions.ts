@@ -1,5 +1,5 @@
-import { EnumProperty, Property } from "./properties/property"
-import { Step } from "./state/steps"
+import { EnumProperty, Property } from "./properties/property.js"
+import { Step } from "./state/steps.js"
 
 const newQuestions: any = {
   _interetVoiture: new Property({
@@ -53,24 +53,23 @@ const newQuestions: any = {
   },
 }
 
-export default {
-  addBlocks: (b: any) => {
-    Object.keys(newQuestions).forEach((questionId) => {
-      b.push(
-        newQuestions[questionId].step ||
-          new Step({
-            key: undefined,
-            chapter: undefined,
-            entity: "individu",
-            id: "demandeur",
-            variable: questionId,
-          })
-      )
-    })
-  },
-  addProperties: (props: any) => {
-    Object.keys(newQuestions).forEach((questionId: string) => {
-      props[questionId] = newQuestions[questionId].p || newQuestions[questionId]
-    })
-  },
+export function addBlocks(b: any) {
+  Object.keys(newQuestions).forEach((questionId) => {
+    b.push(
+      newQuestions[questionId].step ||
+        new Step({
+          key: undefined,
+          chapter: undefined,
+          entity: "individu",
+          id: "demandeur",
+          variable: questionId,
+        })
+    )
+  })
+}
+
+export function addProperties(props: any) {
+  Object.keys(newQuestions).forEach((questionId: string) => {
+    props[questionId] = newQuestions[questionId].p || newQuestions[questionId]
+  })
 }

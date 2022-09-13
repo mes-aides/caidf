@@ -7,13 +7,7 @@ import Scolarite from "../scolarite.js"
 
 import { BlockLayout } from "../types/blocks"
 
-let additionalQuestions
-try {
-  additionalQuestions = require("../additional-questions")?.default
-} catch (error) {
-  console.log(error)
-  // Do nothing
-}
+import { addBlocks } from "../additional-questions.js"
 
 function individuBlockFactory(id, chapter?: string) {
   const r = (variable, chapter?: string) =>
@@ -599,9 +593,7 @@ export function generateBlocks(situation): BlockLayout[] {
     extraBlock(),
   ]
 
-  if (additionalQuestions && additionalQuestions.addBlocks) {
-    additionalQuestions.addBlocks(initial)
-  }
+  addBlocks(initial)
 
   initial.push(
     ...[

@@ -13,7 +13,7 @@ export default {
   created() {
     this.$router.isReady().then(() => {
       if (this.$route.query.debug === "parcours") {
-        this.$store.dispatch("setDebug", true)
+        this.store.setDebug(true)
       }
     })
   },

@@ -175,7 +175,7 @@ export default {
   },
   methods: {
     disableDebug() {
-      this.store.dispatch("setDebug", false)
+      this.store.setDebug(false)
       this.$router.replace({ debug: null })
     },
   },

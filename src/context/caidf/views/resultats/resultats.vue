@@ -86,33 +86,30 @@ export default {
     } else if (this.$route.query?.situationId) {
       if (this.store.state.situationId !== this.$route.query.situationId) {
         this.store
-          .dispatch("fetch", this.$route.query.situationId)
-          .then(() => this.store.dispatch("compute"))
+          .fetch(this.$route.query.situationId)
+          .then(() => this.store.compute())
       } else if (!this.store.hasResults) {
-        this.store.dispatch("compute")
+        this.store.compute()
       } // Else nothing to do
     } else if (!this.store.passSanityCheck) {
       this.restoreLatest()
     } else {
       if (this.store.state.calculs.dirty) {
-        this.store.commit("setSaveSituationError", null)
+        this.store.setSaveSituationError(null)
         this.store
-          .dispatch("save")
+          .save()
           .then(() => {
             if (this.store.state.access.forbidden) {
               return
             }
-            return this.store.dispatch("compute")
+            return this.store.compute()
           })
           .catch((error) => {
-            this.store.commit(
-              "setSaveSituationError",
-              error.response?.data || error
-            )
+            this.store.setSaveSituationError(error.response?.data || error)
             this.$matomo?.trackEvent("General", "Erreur sauvegarde simulation")
           })
       } else if (!this.store.hasResults) {
-        this.store.dispatch("compute")
+        this.store.compute()
       }
     }
 

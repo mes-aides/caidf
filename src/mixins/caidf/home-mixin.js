@@ -6,11 +6,11 @@ export default {
   },
   methods: {
     newSituation: function () {
-      this.store.dispatch("clear", this.$route.query.external_id)
+      this.store.clear(this.$route.query.external_id)
       this.next()
     },
     next: function () {
-      this.store.dispatch("verifyBenefitVariables")
+      this.store.verifyBenefitVariables()
       this.$push()
     },
   },
