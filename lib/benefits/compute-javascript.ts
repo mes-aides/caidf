@@ -105,10 +105,10 @@ export function testGeographicalEligibility(
 export const CONDITION_STATEGY: ConditionsLayout = {
   benefit: {
     test: (condition, { openfiscaResponse, periods }) => {
-      let benefit =
+      const benefit =
         openfiscaResponse.individus.demandeur[condition.name] ||
         openfiscaResponse.familles._[condition.name]
-      let eligibility = Boolean(benefit && benefit[periods.thisMonth.id])
+      const eligibility = Boolean(benefit && benefit[periods.thisMonth.id])
       return condition.invert ? !eligibility : eligibility
     },
   },

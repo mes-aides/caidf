@@ -305,6 +305,7 @@ fields:
     name: link
     widget: string
     pattern: *pattern_url
+    required: false
   field_link_instructions: &field_link_instructions
     label: Lien vers des instructions à suivre
     name: instructions
@@ -808,6 +809,12 @@ collections:
       - *field_benefit_position
       - *field_private_benefit
       - *field_benefit_partial_support
+      - label: Texte pour le CTA sur la page dédiée
+        name: cta
+        type: hidden
+      - label: Texte pour le CTA sur la page listing
+        name: list_cta
+        type: hidden
   - name: benefits_openfisca
     label: Aides complexes
     label_singular: Aide complexe
