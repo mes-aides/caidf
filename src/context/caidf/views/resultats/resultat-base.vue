@@ -36,6 +36,7 @@ import LoadingModal from "@/components/loading-modal"
 import ResultatsMixin from "@/mixins/resultats"
 import ProgressBar from "@/components/progress-bar"
 import Breadcrumb from "@/context/caidf/components/breadcrumb"
+import { useStore } from "@/stores"
 
 export default {
   name: "ResultatBase",
@@ -45,6 +46,11 @@ export default {
     LoadingModal,
   },
   mixins: [ResultatsMixin],
+  setup() {
+    return {
+      store: useStore(),
+    }
+  },
   computed: {
     situation: function () {
       return this.store.situation

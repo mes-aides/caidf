@@ -23,6 +23,7 @@ import ResultatsMixin from "@/mixins/resultats"
 import StatisticsMixin from "@/mixins/statistics"
 import ResultatBase from "@/context/caidf/views/resultats/resultat-base"
 import SmallBackButton from "@/context/caidf/components/small-back-button"
+import { useStore } from "@/stores"
 
 export default {
   name: "SimulationResultatsDetail",
@@ -32,6 +33,11 @@ export default {
     DroitsDetails,
   },
   mixins: [ResultatsMixin, StatisticsMixin],
+  setup() {
+    return {
+      store: useStore(),
+    }
+  },
   computed: {
     situation: function () {
       return this.store.situation

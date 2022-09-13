@@ -31,10 +31,16 @@
 import ArrowRight from "@/context/caidf/icons/arrow-right"
 import Check from "@/context/caidf/icons/check-circle"
 import Chapters from "@/../lib/chapters"
+import { useStore } from "@/stores"
 
 export default {
   name: "Breadcrumb",
   components: { Check, ArrowRight },
+  setup() {
+    return {
+      store: useStore(),
+    }
+  },
   computed: {
     chapters() {
       return this.$state.chapters(

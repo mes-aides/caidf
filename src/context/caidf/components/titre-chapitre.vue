@@ -15,9 +15,15 @@
 
 <script>
 import Chapters from "@/../lib/chapters"
+import { useStore } from "@/stores"
 
 export default {
   name: "TitreChapitre",
+  setup() {
+    return {
+      store: useStore(),
+    }
+  },
   computed: {
     title() {
       return this.getTitleByRoute(this.$route)

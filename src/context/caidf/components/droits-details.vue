@@ -144,6 +144,7 @@ import DroitMixin from "@/mixins/droit-mixin"
 import DroitHeader from "@/components/droit-header"
 import Check from "@/context/caidf/icons/check"
 import Export from "@/context/caidf/icons/export"
+import { useStore } from "@/stores"
 
 export default {
   name: "DroitsDetails",
@@ -161,8 +162,9 @@ export default {
     patrimoineCaptured: Boolean,
     ressourcesYearMinusTwoCaptured: Boolean,
   },
-  data() {
+  setup() {
     return {
+      store: useStore(),
       brokenLinkButtonState: "show",
     }
   },

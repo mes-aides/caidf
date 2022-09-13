@@ -28,6 +28,7 @@ import {
   getEtablissements,
 } from "@/../lib/benefits/etablissements"
 import SmallBackButton from "@/context/caidf/components/small-back-button"
+import { useStore } from "@/stores"
 
 export default {
   name: "Lieux",
@@ -35,8 +36,9 @@ export default {
     SmallBackButton,
     Etablissement,
   },
-  data: function () {
+  setup() {
     return {
+      store: useStore(),
       benefit: null,
       list: [],
       updating: true,

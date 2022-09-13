@@ -55,6 +55,7 @@ import Breadcrumb from "@/context/caidf/components/breadcrumb"
 import ProgressBar from "@/components/progress-bar"
 import Hint from "@/lib/hint"
 import WarningMessage from "@/components/warning-message"
+import { useStore } from "@/stores"
 
 export default {
   name: "Simulation",
@@ -65,7 +66,7 @@ export default {
     TitreChapitre,
     Progress,
   },
-  data() {
+  setup() {
     const helpingContentPerChapter = {
       profil: {
         text: `Ces informations sont nécessaires au traitement de votre demande. Vos données ne seront pas conservées à l’issue de la simulation.`,
@@ -96,6 +97,7 @@ export default {
       },
     }
     return {
+      store: useStore(),
       helpingContentPerChapter,
       window,
     }

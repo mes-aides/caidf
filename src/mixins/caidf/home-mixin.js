@@ -1,16 +1,21 @@
+import { useStore } from "@/stores"
+
 export default {
   computed: {
     hasExistingSituation: function () {
-      return this.store.passSanityCheck
+      const store = useStore()
+      return store.passSanityCheck
     },
   },
   methods: {
     newSituation: function () {
-      this.store.clear(this.$route.query.external_id)
+      const store = useStore()
+      store.clear(this.$route.query.external_id)
       this.next()
     },
     next: function () {
-      this.store.verifyBenefitVariables()
+      const store = useStore()
+      store.verifyBenefitVariables()
       this.$push()
     },
   },
