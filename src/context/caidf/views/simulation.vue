@@ -33,10 +33,10 @@
                 >Quitter le mode debug</button
               >
             </div>
-            <WarningMessage v-if="$store.state.message.text">
+            <WarningMessage v-if="store.state.message.text">
               <div
                 class="caidf-font-body-small"
-                v-html="$store.state.message.text"
+                v-html="store.state.message.text"
               />
             </WarningMessage>
             <div class="aj-box-wrapper">
@@ -108,14 +108,14 @@ export default {
       return this.$route.path !== "/simulation/recapitulatif"
     },
     debug() {
-      return this.$store.getters.getDebug
+      return this.store.getDebug
     },
     showProgress() {
       return "resultatsAttendus" !== this.$route.name
     },
     progress() {
       const cleanPath = this.$route.path.replace(/\/en_savoir_plus$/, "")
-      const allSteps = this.$store.getters.getAllSteps.filter(
+      const allSteps = this.store.getAllSteps.filter(
         (step) => !["/", "/simulation/resultats"].includes(step.path)
       )
       const activeSteps = allSteps.filter((step) => step.isActive)
@@ -123,7 +123,7 @@ export default {
       // Use anwers as basis when you are not in journey
       if (!allSteps.some((step) => step.path === cleanPath)) {
         const answeredSteps = activeSteps.filter((step) =>
-          isStepAnswered(this.$store.state.answers.all, step)
+          isStepAnswered(this.store.state.answers.all, step)
         )
         return answeredSteps.length / activeSteps.length
       } else {
@@ -143,8 +143,8 @@ export default {
     chapters() {
       return this.$state.chapters(
         this.$route.path,
-        this.$store.getters.getAllSteps,
-        this.$store.getters.lastUnansweredStep?.path
+        this.store.getAllSteps,
+        this.store.lastUnansweredStep?.path
       )
     },
     currentChaper() {
@@ -175,7 +175,7 @@ export default {
   },
   methods: {
     disableDebug() {
-      this.$store.dispatch("setDebug", false)
+      this.store.dispatch("setDebug", false)
       this.$router.replace({ debug: null })
     },
   },

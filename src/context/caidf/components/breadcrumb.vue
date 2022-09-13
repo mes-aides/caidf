@@ -39,8 +39,8 @@ export default {
     chapters() {
       return this.$state.chapters(
         this.$route.path,
-        this.$store.getters.getAllSteps,
-        this.$store.getters.lastUnansweredStep?.path
+        this.store.getAllSteps,
+        this.store.lastUnansweredStep?.path
       )
     },
     currentChapterIndex() {

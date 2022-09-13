@@ -35,8 +35,8 @@ export default {
 
       const current = path.replace(/\/en_savoir_plus/, "")
       const step =
-        this.$store.getters.passSanityCheck &&
-        this.$state.current(current, this.$store.getters.getAllSteps)
+        this.store.passSanityCheck &&
+        this.$state.current(current, this.store.getAllSteps)
       const chapterName = step?.chapter || ""
       return Chapters.getLabel(chapterName)
     },

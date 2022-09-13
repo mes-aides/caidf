@@ -45,7 +45,7 @@
             <span>
               <i class="fa fa-warning" aria-hidden="true" />  Cette aide se base
               sur vos ressources de l'année
-              {{ $store.state.dates.fiscalYear.label }}
+              {{ store.state.dates.fiscalYear.label }}
             </span>
             <router-link
               v-if="!aCharge"
@@ -168,7 +168,7 @@ export default {
   },
   computed: {
     aCharge() {
-      return Situation.aCharge(this.$store.getters.situation)
+      return Situation.aCharge(this.store.situation)
     },
   },
   methods: {

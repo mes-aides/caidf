@@ -47,7 +47,7 @@ export default {
   mixins: [ResultatsMixin],
   computed: {
     situation: function () {
-      return this.$store.getters.situation
+      return this.store.situation
     },
   },
 }

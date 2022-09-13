@@ -44,7 +44,7 @@ export default {
     }
   },
   mounted: function () {
-    const city = this.$store.getters.situation.menage.depcom
+    const city = this.store.situation.menage.depcom
     this.benefit = Institution.benefits.all.find(
       (benefit) => benefit.id === this.$route.params.benefit_id
     )
