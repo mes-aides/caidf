@@ -52,7 +52,7 @@ export default {
     return {}
   },
   computed: {
-    label: () {
+    label() {
       return (this.type !== "link" && this.benefit.cta) || typeLabels[this.type]
     },
     longLabel() {
