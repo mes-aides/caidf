@@ -406,10 +406,8 @@ router.beforeEach((to, from, next) => {
         "redirect",
         "resultats",
         "resultatsDetails",
-        "resultatsLieuxGeneriques"
-      ].indexOf(
-        to.name
-      ) === -1 &&
+        "resultatsLieuxGeneriques",
+      ].indexOf(to.name) === -1 &&
       !store.passSanityCheck &&
       to.query.debug === undefined
     ) {
