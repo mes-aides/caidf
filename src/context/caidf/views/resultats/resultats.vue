@@ -84,7 +84,7 @@ export default {
     if (this.mock(this.$route.params.droitId)) {
       return
     } else if (this.$route.query?.situationId) {
-      if (this.store.state.situationId !== this.$route.query.situationId) {
+      if (this.store.situationId !== this.$route.query.situationId) {
         this.store
           .fetch(this.$route.query.situationId)
           .then(() => this.store.compute())
@@ -94,12 +94,12 @@ export default {
     } else if (!this.store.passSanityCheck) {
       this.restoreLatest()
     } else {
-      if (this.store.state.calculs.dirty) {
+      if (this.store.calculs.dirty) {
         this.store.setSaveSituationError(null)
         this.store
           .save()
           .then(() => {
-            if (this.store.state.access.forbidden) {
+            if (this.store.access.forbidden) {
               return
             }
             return this.store.compute()

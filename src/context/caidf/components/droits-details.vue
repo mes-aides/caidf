@@ -45,7 +45,7 @@
             <span>
               <i class="fa fa-warning" aria-hidden="true" />  Cette aide se base
               sur vos ressources de l'année
-              {{ store.state.dates.fiscalYear.label }}
+              {{ store.dates.fiscalYear.label }}
             </span>
             <router-link
               v-if="!aCharge"
@@ -53,7 +53,7 @@
               to="/simulation/ressources/fiscales"
             >
               Déclarez vos ressources
-              {{ $store.state.dates.fiscalYear.label }}
+              {{ store.dates.fiscalYear.label }}
             </router-link>
           </div>
           <div

@@ -33,11 +33,8 @@
                 >Quitter le mode debug</button
               >
             </div>
-            <WarningMessage v-if="store.state.message.text">
-              <div
-                class="caidf-font-body-small"
-                v-html="store.state.message.text"
-              />
+            <WarningMessage v-if="store.message.text">
+              <div class="caidf-font-body-small" v-html="store.message.text" />
             </WarningMessage>
             <div class="aj-box-wrapper">
               <router-view :key="$route.path" />
@@ -123,7 +120,7 @@ export default {
       // Use anwers as basis when you are not in journey
       if (!allSteps.some((step) => step.path === cleanPath)) {
         const answeredSteps = activeSteps.filter((step) =>
-          isStepAnswered(this.store.state.answers.all, step)
+          isStepAnswered(this.store.answers.all, step)
         )
         return answeredSteps.length / activeSteps.length
       } else {
