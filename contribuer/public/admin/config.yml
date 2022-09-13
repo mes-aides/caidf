@@ -398,6 +398,14 @@ fields:
         value: _interetEtudesEtranger
       - label: Oui, l'afficher en cas d'intérêt pour faire une formation dans le sanitaire et social.
         value: _interetAidesSanitaireSocial
+      - label: Oui, l'afficher en cas d'intérêt de possession d'une voitur ou un tel souhait.
+        value: _interetVoiture
+      - label: Oui, l'afficher en cas de recherche d'un emploi.
+        value: _interetEmploi
+      - label: Oui, l'afficher en cas de recherche d'un logement.
+        value: _interetLogement
+      - label: Oui, l'afficher en cas d'intérêt pour un diagnostif financier.
+        value: _interetDiagnostifFinancier
   field_openfisca_linked_entity: &field_openfisca_linked_entity
     label: Entité de rattachement de la variable dans OpenFisca
     name: entity
@@ -812,9 +820,11 @@ collections:
       - label: Texte pour le CTA sur la page dédiée
         name: cta
         type: hidden
+        required: false
       - label: Texte pour le CTA sur la page listing
         name: list_cta
         type: hidden
+        required: false
   - name: benefits_openfisca
     label: Aides complexes
     label_singular: Aide complexe
