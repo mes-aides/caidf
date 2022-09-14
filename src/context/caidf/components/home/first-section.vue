@@ -1,6 +1,6 @@
 <template>
   <section class="caidf-home-section caidf-first-section">
-    <div class="caidf-home-container">
+    <div class="caidf-home-container" data-testid="home-hero-content">
       <div class="caidf-first-section-text caidf-max-width-text">
         <h1>
           <span class="caidf-has-text-white"
@@ -13,7 +13,9 @@
           forcément une pour vous !
         </p>
         <div class="caidf-first-section-buttons">
-          <NewSimulationButton>Je me lance</NewSimulationButton>
+          <NewSimulationButton data-testid="new-simulation"
+            >Je me lance</NewSimulationButton
+          >
           <ConsultantContactButton />
         </div>
         <div v-if="hasExistingSituation" class="caidf-first-section-buttons">

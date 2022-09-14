@@ -6,6 +6,7 @@ import logement from "../utils/logement"
 import revenu from "../utils/revenu"
 import projet from "../utils/projet"
 import results from "../utils/results"
+import caidf from "../utils/caidf"
 
 context("Full simulation", () => {
   beforeEach(() => {
@@ -31,6 +32,8 @@ context("Full simulation", () => {
     projet.fill__interetBafa(false)
     projet.fill__interetPermisDeConduire(false)
     projet.fill__interetAidesSanitaireSocial(false)
+
+    caidf.fill_caidf()
 
     results.wait()
     results.hasAAH()

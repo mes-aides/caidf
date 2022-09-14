@@ -7,6 +7,7 @@ import profil from "../utils/profil"
 import projet from "../utils/projet"
 import results from "../utils/results"
 import revenu from "../utils/revenu"
+import caidf from "../utils/caidf"
 
 context("Full simulation", () => {
   beforeEach(() => {
@@ -41,6 +42,8 @@ context("Full simulation", () => {
     projet.fill__interetBafa(false)
     projet.fill__interetPermisDeConduire(false)
     projet.fill__interetAidesSanitaireSocial(false)
+
+    caidf.fill_caidf()
 
     results.wait()
     results.hasCSS()

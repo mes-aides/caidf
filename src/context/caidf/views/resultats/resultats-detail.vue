@@ -1,6 +1,6 @@
 <template>
   <ResultatBase>
-    <SmallBackButton @click="goBack($event)">
+    <SmallBackButton @click="goBack($event)" data-testid="back-button">
       Retour aux résultats
     </SmallBackButton>
 

@@ -1,4 +1,4 @@
-import { EnumProperty, Property } from "./properties/property.js"
+import { MultipleProperty, Property } from "./properties/property.js"
 import { Step } from "./state/steps.js"
 
 const newQuestions: any = {
@@ -12,7 +12,7 @@ const newQuestions: any = {
   _interetEmploi: new Property({
     question: "Recherchez vous un emploi ?",
   }),
-  _aleas: new EnumProperty({
+  _aleas: new MultipleProperty({
     question: "Faites-vous face à un aléa de la vie ?",
     questionType: "multiple",
     items: [
