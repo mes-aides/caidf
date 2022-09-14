@@ -1,0 +1,18 @@
+label: assurance Eko auto et/ou 2 roues
+institution: credit_agricole
+description: >-
+  En fonction de votre véhicule, de vos besoins et de votre budget vous pouvez
+  compléter votre couverture et réaliser des économies sur votre assurance automobile ou 2 roues,
+  grâce à EKO assurance comprenant les services essentiels à un prix attractif.
+  <br/><br/>
+  Réalisez en ligne, sans engagement et en toute autonomie un devis <a target="_blank" rel="noopener" title="Nouvelle fenêtre"
+  href="https://www.credit-agricole.fr/ca-paris/particulier/simulation-devis/assurance/devis-auto1.html">assurance automobile</a>
+  ou <a target="_blank" rel="noopener" title="Nouvelle fenêtre"
+  href="https://www.credit-agricole.fr/ca-paris/particulier/campagnes/assurance-2-roues-mm.html">2 roues</a> suivant votre besoin.
+interestFlag: _interetVoiture
+instructions: https://www.credit-agricole.fr/ca-paris/particulier/assurances/auto-2-roues/nouvelle-assurance-auto.html
+prefix: l’
+type: bool
+periodicite: ponctuelle
+top: 114
+cta: Je découvre

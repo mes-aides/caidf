@@ -4,4 +4,5 @@ export interface chapterLayout {
   done?: boolean
   current?: string
   root?: string
+  breadcrumb?: string
 }

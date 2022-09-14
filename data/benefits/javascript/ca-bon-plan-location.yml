@@ -1,0 +1,27 @@
+label: bon plan Location
+institution: credit_agricole
+description: >-
+  Futur locataire, vous rencontrez des difficultés à trouver un logement car votre dossier
+  ne répond pas aux critères du propriétaire bailleur. Le Crédit Agricole d’Ile-de-France
+  en partenariat avec Cautionéo devient votre garant !
+  Bénéficiez de deux mois de cotisations offerts.
+  <br/><br/>
+  Profitez également, de <a target="_blank" rel="noopener" title="Nouvelle fenêtre"
+  href="https://location.monespaceimmo.ca-paris.fr/">Ma future location</a>,
+  gratuitement et sans engagement,
+  recevez des annonces quotidiennes correspondant à votre recherche et
+  boostez votre dossier de location.
+conditions_generales:
+  - type: age
+    operator: ">="
+    value: 18
+  - type: age
+    operator: "<="
+    value: 30
+interestFlag: _interetLogement
+instructions: https://globetrotterplace-ca-paris.fr/bon-plan-location/
+prefix: le
+type: bool
+periodicite: ponctuelle
+top: 116
+cta: Je trouve un logement

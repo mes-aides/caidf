@@ -1,0 +1,24 @@
+label: bon plan Emploi
+institution: credit_agricole
+description: >-
+  Hello Charly accompagne gratuitement des milliers de jeunes dans leur orientation scolaire.
+  <br/><br/>
+  Profitez également de <a target="_blank" rel="noopener" title="Nouvelle fenêtre"
+  href="https://www.credit-agricole.fr/particulier/conseils/magazine/tout-un-mag/emploi-des-jeunes-1-jeune-1-solution.html">
+  1jeune1solution</a> qui vise à offrir à chaque jeune arrivant sur le marché
+  du travail, des leviers, des aides à l’embauche, des formations, des accompagnements, des aides financières…
+  L’objectif est de ne laisser personne sur le bord de la route.
+conditions_generales:
+  - type: age
+    operator: ">="
+    value: 18
+  - type: age
+    operator: "<="
+    value: 30
+interestFlag: _interetEmploi
+instructions: https://globetrotterplace-ca-paris.fr/bon-plan-metier/
+prefix: le
+type: bool
+periodicite: ponctuelle
+top: 116
+cta: Je trouve un emploi

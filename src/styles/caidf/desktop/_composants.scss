@@ -1,0 +1,128 @@
+.caidf-breadcrumb-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: $color-secondaire;
+  color: white;
+  height: 72px;
+
+  .caidf-breadcrumb {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    &.tablet {
+      display: none;
+    }
+
+    .caidf-breadcrumb-arrow {
+      margin: 0 16px;
+
+      svg {
+        height: 15px;
+        width: 15px;
+      }
+    }
+
+    .caidf-breadcrumb-link {
+      display: flex;
+      align-items: center;
+      color: white;
+
+      text-decoration: none;
+
+      svg {
+        height: 24px;
+        width: 24px;
+      }
+
+      &.active {
+        font-weight: 700;
+        color: white;
+      }
+
+      span::before {
+        display: block;
+        content: attr(data-text);
+        font-weight: bold;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
+
+      &.disable:not(.active) {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      &.done {
+        color: white;
+
+        svg.caidf-check path {
+          fill: $color-accent;
+        }
+      }
+
+      .caidf-check {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.aj-selections .aj-selection-wrapper,
+.aj-selection-wrapper {
+  input[type="radio"],
+  input[type="checkbox"] {
+    left: 0 !important;
+
+    &:focus + label {
+      font-weight: 700;
+    }
+  }
+
+  label {
+    width: auto !important;
+    min-width: 0px !important;
+    padding: 0 0 0 36px !important;
+    box-shadow: none !important;
+    border: none !important;
+    background-color: transparent !important;
+    transition: none !important;
+  }
+}
+
+html body .aj-main-container .aj-help-popup {
+  display: none;
+  padding: 6px;
+  font-size: 14px;
+  line-height: 20px;
+
+  img {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.caidf-notification {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 16px;
+    path {
+      fill: $color-warning-100;
+    }
+  }
+
+  .caidf-font-bold {
+    margin-right: 16px;
+  }
+}
+
+html body > .aj-website .aj-complete-progress-bar {
+  height: $progress-height;
+}
+
+.caidf-max-width-text {
+  max-width: 650px;
+}

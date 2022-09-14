@@ -1,0 +1,44 @@
+html body {
+  .aj-selections .aj-selection-wrapper {
+    input[type="radio"] {
+      border: 1px solid $color-40-dividers;
+      width: 24px;
+      height: 24px;
+
+      &:checked {
+        border: 1px solid $color-70-text-major;
+
+        &:before {
+          width: 8px;
+          height: 8px;
+          background-color: $color-primaire;
+        }
+      }
+    }
+  }
+
+  .aj-main-container .aj-selection-wrapper {
+    input[type="checkbox"] {
+      border: 1px solid $color-40-dividers;
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+
+      &:checked {
+        border: 1px solid $color-70-text-major !important;
+        background-color: transparent !important;
+
+        &:before {
+          content: "";
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          width: 5px;
+          height: 5px;
+          border-radius: 0;
+          background-color: $color-primaire;
+        }
+      }
+    }
+  }
+}

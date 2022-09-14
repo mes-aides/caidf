@@ -6,6 +6,7 @@ import config from "./dist-server/backend/config/index.js"
 import configureAPI from "./dist-server/configure.js"
 import mock from "./dist-server/mock.js"
 import benefits from "./dist-server/data/all.js"
+import webpack from "webpack"
 
 const { baseURL, github, matomo, netlifyContributionURL, statistics } = config
 const __dirname = new URL(".", import.meta.url).pathname
@@ -15,8 +16,8 @@ process.env.VUE_APP_BENEFIT_COUNT = benefits.all.filter(
   (benefit) => !benefit.private
 ).length
 process.env.VUE_APP_MATOMO_ID = matomo.id
-process.env.VUE_APP_CONTACT_EMAIL = "aides-jeunes@beta.gouv.fr"
-process.env.VUE_APP_CONTEXT_NAME = "1jeune1solution"
+process.env.VUE_APP_CONTACT_EMAIL = "equipe@mes-aides.org"
+process.env.VUE_APP_CONTEXT_NAME = "mes-aides.org"
 process.env.VUE_APP_BASE_URL = baseURL
 process.env.VUE_APP_CONTEXT = process.env.CONTEXT
 process.env.VUE_APP_PR_URL = `${process.env.REPOSITORY_URL}/pull/${process.env.REVIEW_ID}`
@@ -53,6 +54,26 @@ export default {
     if (args.env?.BUNDLEANALYZE) {
       config.plugins.push(new BundleAnalyzerPlugin({}))
     }
+
+    // Remplace les fichiers pour éviter de modifier les fichiers fork
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /en-savoir-plus$/,
+        "@/context/caidf/components/en-savoir-plus.vue"
+      )
+    )
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /warning-message$/,
+        "@/context/caidf/components/warning-message"
+      )
+    )
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /views\/simulation\/resultats\/lieux.vue$/,
+        "@/context/caidf/views/lieux"
+      )
+    )
   },
   chainWebpack(config) {
     config.module

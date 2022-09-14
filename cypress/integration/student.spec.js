@@ -6,6 +6,7 @@ import revenu from "../utils/revenu"
 import projet from "../utils/projet"
 import results from "../utils/results"
 import foyer from "../utils/foyer"
+import caidf from "../utils/caidf"
 
 context("Full simulation", () => {
   beforeEach(() => {
@@ -48,6 +49,8 @@ context("Full simulation", () => {
     projet.fill__interetPermisDeConduire(false)
     projet.fill__interetEtudesEtranger(true)
     projet.fill__dureeMoisEtudesEtranger(2)
+
+    caidf.fill_caidf()
 
     results.wait()
 

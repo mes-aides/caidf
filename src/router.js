@@ -33,7 +33,10 @@ const router = createRouter({
     {
       path: "/simulation",
       name: "simulation",
-      redirect: "/simulation/individu/demandeur/date_naissance",
+      redirect: () => {
+        const store = useStore()
+        return store.getAllSteps[1].path
+      },
       component: context.Simulation,
       meta: {
         headTitle: `Ma simulation sur le simulateur d'aides ${context.name}`,
@@ -398,7 +401,7 @@ router.beforeEach((to, from, next) => {
 
     if (
       to.matched.some((r) => r.name === "foyer" || r.name === "simulation") &&
-      !to.path.endsWith("/date_naissance") &&
+      to.path != store.getAllSteps[1].path &&
       [
         "redirect",
         "resultats",
@@ -465,6 +468,7 @@ router.afterEach((to) => {
   if (to.preventFocus) return
 
   nextTick(function () {
+    window.responsiveIframe()
     document.title = getTitleMeta(to)
 
     let title = document.querySelector("h1")
@@ -475,6 +479,14 @@ router.afterEach((to) => {
       title.focus()
     }
   })
+})
+
+router.afterEach((to) => {
+  if (window?.ATInternet?.Tracker?.Tag) {
+    var tag = new window.ATInternet.Tracker.Tag()
+    tag.page.set({ name: to.path })
+    tag.dispatch()
+  }
 })
 
 export default router

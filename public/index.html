@@ -21,37 +21,14 @@
     <link rel="canonical" href="<%= VUE_APP_BASE_URL %>" />
     <meta property="og:url" content="<%= VUE_APP_BASE_URL %>" />
 
-    <meta
-      name="thumbnail"
-      content="<%= VUE_APP_BASE_URL %>/img/Twitter_1024x512.png"
-    />
-    <meta
-      property="og:image"
-      content="<%= VUE_APP_BASE_URL %>/img/Twitter_1024x512.png"
-    />
-    <meta
-      property="twitter:image"
-      content="<%= VUE_APP_BASE_URL %>/img/Twitter_1024x512.png"
-    />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       property="og:site_name"
       content="Simulateur de <%= VUE_APP_CONTEXT_NAME %>"
     />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="<%= VUE_APP_BASE_URL %>/img/favicon/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="<%= VUE_APP_BASE_URL %>/img/favicon/android-chrome-192x192.png"
-    />
+    <link rel="icon" href="<%= VUE_APP_BASE_URL %>/caidf/img/logo-carre.png" />
+
     <meta
       name="apple-mobile-web-app-title"
       content="Simulateur de <%= VUE_APP_CONTEXT_NAME %>"
@@ -61,8 +38,53 @@
       content="Simulateur de <%= VUE_APP_CONTEXT_NAME %>"
     />
     <meta name="theme-color" content="#ffffff" />
+
+    <script src="caidf/jquery-3.6.0.min.js"></script>
+    <script src="caidf/smarttag.js"></script>
+
+    <script type="text/javascript">
+      function responsiveIframe() {
+        jQuery(document).ready(function (jQuery) {
+          var iframes = jQuery("iframe", parent.document)
+          var initialHeight = jQuery("#body-form").height() + 50
+          iframes.each(function () {
+            var th = jQuery(this)
+
+            if (th.attr("id") == "iframe-form") {
+              resizeFrame(th, initialHeight)
+
+              jQuery(document).ready(function (jQuery) {
+                jQuery(window).resize(function () {
+                  initialHeight = jQuery("#body-form").height()
+                  resizeFrame(th, initialHeight)
+                })
+              })
+            }
+          })
+        })
+      }
+      responsiveIframe()
+
+      function resizeFrame(frame, customHeight) {
+        console.log("resizeFrame")
+        frame
+          .add(frame.parent())
+          .css("height", customHeight + "px")
+          .css("min-height", customHeight + "px")
+          .css("width", "100%")
+          .css("border", "0")
+          .css("background", "transparent")
+          .css("border", "0")
+
+        frame
+          .css("height", customHeight + "px")
+          .css("min-height", customHeight + "px")
+          .css("width", "100%")
+          .css("border", "0")
+      }
+    </script>
   </head>
-  <body>
+  <body id="body-form">
     <noscript>
       <strong
         >Désolé le simulateur de <%= VUE_APP_CONTEXT_NAME %> n'est pas

@@ -17,13 +17,13 @@
         action: 'show-locations',
         category: 'General',
       }"
-      class="button primary"
+      class="button outline"
       :to="{
         name: 'resultatsLieuxDedies',
         params: { benefit_id: benefit.id },
       }"
     >
-      À proximité de chez vous
+      Je trouve un centre proche de chez moi
     </router-link>
   </div>
 </template>

@@ -7,6 +7,8 @@ import Scolarite from "../scolarite.js"
 
 import { BlockLayout } from "../types/blocks"
 
+import { addBlocks } from "../additional-questions.js"
+
 function individuBlockFactory(id, chapter?: string) {
   const r = (variable, chapter?: string) =>
     new Step({ entity: "individu", id, variable, chapter })
@@ -464,7 +466,7 @@ function resourceBlocks(situation) {
 }
 
 export function generateBlocks(situation): BlockLayout[] {
-  return [
+  const initial = [
     { steps: [new Step({})] },
     individuBlockFactory("demandeur"),
     kidBlock(situation),
@@ -589,9 +591,18 @@ export function generateBlocks(situation): BlockLayout[] {
       ],
     },
     extraBlock(),
-    {
-      steps: [new Step({ entity: "resultats", chapter: "resultats" })],
-    },
-    new Step({ entity: "resultats" }),
   ]
+
+  addBlocks(initial)
+
+  initial.push(
+    ...[
+      {
+        steps: [new Step({ entity: "resultats", chapter: "resultats" })],
+      },
+      new Step({ entity: "resultats" }),
+    ]
+  )
+
+  return initial
 }

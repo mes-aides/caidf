@@ -1,13 +1,32 @@
 import { chapterLayout } from "./types/chapters"
 
 const chapters: chapterLayout[] = [
-  { label: "Mon profil", name: "profil" },
-  { label: "Mon foyer", name: "foyer" },
-  { label: "Mon logement", name: "logement" },
-  { label: "Mes revenus", name: "revenus" },
-  { label: "Mes projets", name: "projets" },
-  { label: "Récapitulatif", name: "recapitulatif" },
-  { label: "Mes résultats", name: "resultats" },
+  { label: "Parlez-nous de vous", breadcrumb: "Vous", name: "profil" },
+  {
+    label: "Qui sont les membres de votre foyer ?",
+    breadcrumb: "Votre famille",
+    name: "foyer",
+  },
+  {
+    label: "Votre logement principal",
+    breadcrumb: "Votre logement",
+    name: "logement",
+  },
+  {
+    label: "Vos ressources personnelles",
+    breadcrumb: "Vos ressources",
+    name: "revenus",
+  },
+  {
+    label: "Parlez-nous de votre projet",
+    breadcrumb: "Vos projets",
+    name: "projets",
+  },
+  {
+    label: "Résultat de votre simulation",
+    breadcrumb: "Vos résultats",
+    name: "resultats",
+  },
 ]
 
 function getChapters() {

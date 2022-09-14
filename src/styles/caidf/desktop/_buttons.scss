@@ -1,0 +1,105 @@
+.light-primary-button {
+  border: none !important;
+  background-color: rgba($color-primaire, 0.6) !important;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primaire !important;
+  }
+}
+
+.caidf-recapitulatif-button {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 3px;
+
+  img {
+    margin: auto;
+    width: 18px;
+    height: 24px;
+  }
+}
+
+button.button {
+  box-shadow: none !important;
+
+  &.disabled {
+    border: 1px solid $color-30-disabled !important;
+    background-color: $color-30-disabled !important;
+  }
+}
+
+.caidf-back-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+  background-color: transparent;
+  color: $color-primaire;
+  font-family: "Open Sans Semi-bold";
+  font-size: 16px;
+  text-decoration: none;
+
+  svg {
+    transform: rotate(180deg);
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+
+    path {
+      fill: $color-primaire;
+    }
+  }
+
+  &:hover {
+    svg path {
+      fill: var(--dark-blue);
+    }
+  }
+}
+
+@mixin caidf-button-mixin(
+  $color-background,
+  $color-font,
+  $color-border,
+  $color-border-hover
+) {
+  border: 1px solid $color-border;
+  background-color: $color-background;
+  color: $color-font;
+
+  &:focus,
+  &:hover {
+    background-color: $color-font;
+    color: $color-background;
+    border-color: $color-border-hover;
+  }
+}
+
+.caidf-button {
+  display: inline-block;
+  padding: 12px 24px;
+  min-width: 200px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+
+  &.caidf-accent {
+    @include caidf-button-mixin($color-accent, white, $color-accent, white);
+  }
+
+  &.caidf-outline-white {
+    @include caidf-button-mixin($color-first-section-home, white, white, white);
+  }
+}
+
+.caidf-link-with-icon {
+  display: flex;
+  align-items: center;
+
+  svg,
+  img {
+    margin-right: 8px;
+  }
+}

@@ -37,7 +37,7 @@
         </div>
         <DroitEstime :droit="droit" />
         <div class="aj-aide-cta" data-testid="aide-cta">
-          <button class="button primary"> Demander cette aide </button>
+          <button class="button primary">{{ getBenefitCTA(droit) }}</button>
         </div>
       </router-link>
     </div>
@@ -112,6 +112,12 @@ export default {
       return `Demander ${droit.prefix}${droit.prefix == "l’" ? "" : " "}${
         droit.label
       }`
+    },
+    getBenefitCTA: function (droit) {
+      if (droit.institution.slug == "credit_agricole") {
+        return droit.list_cta || "Découvrir cette offre"
+      }
+      return "Demander cette aide"
     },
   },
 }
