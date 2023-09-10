@@ -3,6 +3,11 @@ institution: credit_agricole
 description:
   Une épargne pour tous, 100% souple et disponible. Constituez-vous sans aucun risque une
   réserve d’argent facilement disponible pour les imprévus ou les coups de cœur.
+  <br/><br>
+  <div class="caidf-bon-a-savoir">
+    <div class="title">Bon à savoir</div>
+    <div>Se constituer une épargne de précaution est important en cas de coups durs (dépenses imprévues, perte d'un emploi ...) et vous permet d'économiser pour vos projets.</div>
+  </div>
 conditions:
   - Ne pas déjà détenir un livret A dans une autre banque. vous possédez un Livret A ?
     Pensez au <a target="_blank" rel="noopener"
