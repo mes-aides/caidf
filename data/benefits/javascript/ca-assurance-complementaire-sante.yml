@@ -4,6 +4,11 @@ description: >-
   La complémentaire Santé complète les remboursements des frais de santé pris en charge par
   votre Régime Obligatoire. Avec l’assurance Santé du Crédit Agricole, bénéficiez des couvertures
   adaptées à vos besoins et d’avantages spécifiques.
+  <br/><br/>
+  <div class="caidf-bon-a-savoir">
+    <div class="title">Bon à savoir</div>
+    <div>S'assurer est important pour ne pas être fragilisé davantage face aux aléas de la vie (accidents, maladies, etc.) et vous aide à couvrir tout ou une partie de vos frais médicaux non remboursés par la Sécurité Sociale.</div>
+  </div>
 conditions_generales:
   - type: benefit
     name: css_participation_forfaitaire
