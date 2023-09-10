@@ -4,6 +4,11 @@ description: >
   Dans la vie on ne maîtrise pas toujours tout.
   Avec EKO, au moins vous maîtrisez votre budget ! Une carte,
   une appli, une agence pour 2 euros par mois.
+  <br/><br>
+  <div class="caidf-bon-a-savoir">
+    <div class="title">Bon à savoir</div>
+    <div>L’offre EKO vous permet de garder le contrôle de vos finances grâce à un contrôle de solde, des alertes et un conseiller à votre écoute.</div>
+  </div>
 conditions:
   - Ne pas être à découvert lors de la souscription de l'offre.
     Votre solde est négatif ? Contactez votre conseiller pour
