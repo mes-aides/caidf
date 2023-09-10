@@ -9,6 +9,11 @@ description: >-
   href="https://www.credit-agricole.fr/ca-paris/particulier/simulation-devis/assurance/devis-auto1.html">assurance automobile</a>
   ou <a target="_blank" rel="noopener"
   href="https://www.credit-agricole.fr/ca-paris/particulier/campagnes/assurance-2-roues-mm.html">2 roues</a> suivant votre besoin.
+  <br/><br>
+  <div class="caidf-bon-a-savoir">
+    <div class="title">Bon à savoir</div>
+    <div>S'assurer est important pour ne pas être fragilisé davantage en cas de dommages ou de préjudices involontaires et de protéger votre auto, votre entourage et vous-même sur la route.</div>
+  </div>
 interestFlag: _interetVoiture
 instructions: https://www.credit-agricole.fr/ca-paris/particulier/assurances/auto-2-roues/nouvelle-assurance-auto.html
 prefix: l’
