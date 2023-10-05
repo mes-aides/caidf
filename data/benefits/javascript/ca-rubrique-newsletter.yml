@@ -3,6 +3,11 @@ institution: credit_agricole
 description: >
   Newsletter personnalisée, choisissez la thématique budget parmi 3 thèmes qui vous intéressent
   le plus et recevez une fois par mois gratuitement des bons plans pour maitriser votre budget.
+  <br/><br/>
+  <div class="caidf-bon-a-savoir">
+    <div class="title">Bon à savoir</div>
+    <div>Restez informé de l'actualité et des sujets qui pourraient impacter votre budget (épargne, fiscalité, immobilier, etc.) pour vous aider à mieux anticiper la gestion de vos finances et la réalisation de vos projets.</div>
+  </div>
 instructions: https://cadif.massmailing-grp-ext.credit-agricole.fr/optin/formulaire/23-R4J5W9DM3A
 prefix: la
 type: bool

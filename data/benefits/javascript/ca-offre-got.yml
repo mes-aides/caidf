@@ -2,6 +2,11 @@ label: Globe Trotter
 institution: credit_agricole
 description: Globe Trotter, une offre pour les jeunes de 18 à 30 ans inclus.
   1 carte, 0 frais à l'étranger et tous les services d'une grande banque pour 2 euros par mois.
+  <br/><br>
+  <div class="caidf-bon-a-savoir">
+    <div class="title">Bon à savoir</div>
+    <div>L’offre Globe Trotter vous permet de garder le contrôle de vos finances grâce à la gratuité des frais à l’étranger et à l’assurance voyage Mastercard incluse.</div>
+  </div>
 conditions:
   - Détenir un compte dans une banque établie dans l’Espace
     Economique Européen (compte ou livret d’épargne).

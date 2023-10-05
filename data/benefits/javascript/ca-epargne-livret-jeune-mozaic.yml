@@ -3,6 +3,11 @@ institution: credit_agricole
 description:
   Le Livret Jeune Mozaïc permet de vous constituer une première épargne librement.
   L’argent placé sur le livret reste disponible et vous rapporte 0,50% d’intérêts par an.
+  <br/><br>
+  <div class="caidf-bon-a-savoir">
+    <div class="title">Bon à savoir</div>
+    <div>Se constituer une épargne de précaution est important en cas de coups durs (dépenses imprévues, perte d'un emploi ...) et vous permet d'économiser pour vos projets.</div>
+  </div>
 conditions:
   - Déposer un montant minimum à l’ouverture de 10 €.
 conditions_generales:
